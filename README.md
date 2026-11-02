@@ -1,5 +1,8 @@
 # Áudio de Resumo — Android nativo
 
+[![Release](https://img.shields.io/github/v/release/aldecirv/audio-resumo-android?color=8B5CF6)](https://github.com/aldecirv/audio-resumo-android/releases/latest)
+[![Build APK](https://github.com/aldecirv/audio-resumo-android/actions/workflows/build.yml/badge.svg)](https://github.com/aldecirv/audio-resumo-android/actions/workflows/build.yml)
+
 Aplicativo Android nativo de **microaprendizagem em áudio**: resumos de livros, PDFs e EPUBs com narração por TTS, mapa mental, flashcards, quiz e plano de revisão. Convertido do app web React/Express para **Kotlin + XML + Material 3**, com dados locais e IA opcional.
 
 ![Home](docs/screenshots/home.png)
@@ -109,4 +112,4 @@ O CI (`.github/workflows/build.yml`) usa os mesmos secrets `AURORA_*` dos outros
 
 **1.0.0** — primeira versão Android nativa, com biblioteca, IA opcional, importação local de EPUB/PDF, player TTS e módulo de aprendizagem.
 
-APK: veja a página de **Releases** do repositório.
+APK: [**audio-resumo-1.0.0.apk**](https://github.com/aldecirv/audio-resumo-android/releases/download/v1.0.0/audio-resumo-1.0.0.apk) · [Release v1.0.0](https://github.com/aldecirv/audio-resumo-android/releases/tag/v1.0.0)
