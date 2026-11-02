@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Áudio de Resumo</string>
+    <string name="tagline">Aprenda em áudio. Entenda de verdade.</string>
+    <string name="notification_channel_playback">Reprodução de áudio</string>
+    <string name="notification_channel_desc">Controles do resumo narrado</string>
+</resources>

@@ -1,0 +1,1606 @@
+[
+  {
+    "id": "habitos-atomicos",
+    "title": "Hábitos Atômicos",
+    "subtitle": "Mudanças Minúsculas, Resultados Notáveis",
+    "author": "James Clear",
+    "category": "Produtividade",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-amber-500 via-orange-600 to-red-600",
+    "listensCount": 14200,
+    "rating": 4.9,
+    "isFavorite": true,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-01-15T10:00:00Z",
+    "executiveSummary": "Hábitos Atômicos apresenta um modelo prático baseado em 4 leis da mudança de comportamento: tornar o hábito claro, atraente, fácil e satisfatório. Clear argumenta que não nos elevamos ao nível de nossas metas, mas caímos ao nível dos nossos sistemas.",
+    "sections": [
+      {
+        "id": "ha-s1",
+        "title": "1. O Poder dos Ganhos de 1% ao Dia",
+        "timestampSeconds": 0,
+        "content": "Se você melhorar apenas 1% todos os dias durante um ano, terminará trinta e sete vezes melhor. No curto prazo, uma pequena mudança parece imperceptível; no longo prazo, juros compostos de hábitos moldam quem você se torna. O foco deve estar nos sistemas, não unicamente nos resultados finais.",
+        "practicalExample": "Ao invés de definir a meta de escrever um livro, crie o sistema de redigir 200 palavras toda manhã após o café.",
+        "keyQuote": "Você não atinge o nível de suas metas, você cai ao nível dos seus sistemas."
+      },
+      {
+        "id": "ha-s2",
+        "title": "2. Hábitos Baseados em Identidade",
+        "timestampSeconds": 75,
+        "content": "A mudança duradoura ocorre no nível da identidade. Não diga \"estou tentando parar de fumar\", diga \"eu não sou fumante\". Toda ação que você toma é um voto a favor do tipo de pessoa em que você deseja se transformar.",
+        "practicalExample": "Pergunte-se: \"O que uma pessoa saudável e focada faria agora?\" antes de tomar uma decisão.",
+        "keyQuote": "Cada ação sua é um voto no tipo de pessoa que você deseja se tornar."
+      },
+      {
+        "id": "ha-s3",
+        "title": "3. As Quatro Leis da Mudança de Comportamento",
+        "timestampSeconds": 150,
+        "content": "Para criar um bom hábito: 1) Torne-o claro (design de ambiente); 2) Torne-o atraente (emparelhe com recompensas); 3) Torne-o fácil (regra dos 2 minutos); 4) Torne-o satisfatório (reforço imediato). Para eliminar um mau hábito, inverta as quatro regras.",
+        "practicalExample": "Deixe o livro sobre o travesseiro pela manhã para ler 2 páginas antes de dormir sem atrito.",
+        "keyQuote": "Reduza o atrito dos bons hábitos e aumente a fricção dos maus hábitos."
+      },
+      {
+        "id": "ha-s4",
+        "title": "4. A Regra dos 2 Minutos e a Consistência",
+        "timestampSeconds": 225,
+        "content": "Quando iniciar um novo hábito, ele deve levar menos de dois minutos para ser feito. O segredo é estabelecer a presença antes da perfeição. Você não pode otimizar um hábito que ainda não existe.",
+        "practicalExample": "Em vez de se propor 1 hora de exercícios, proponha-se a colocar o tênis e alongar por 2 minutos na sala.",
+        "keyQuote": "Padronize antes de otimizar."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "O efeito composto dos hábitos",
+        "description": "Pequenas decisões diárias se acumulam exponencialmente com o tempo."
+      },
+      {
+        "title": "Identidade precede o hábito",
+        "description": "Foque em quem você quer ser, e seus atos seguirão naturalmente."
+      },
+      {
+        "title": "Ambiente vence a força de vontade",
+        "description": "Projete o espaço físico para que a escolha certa seja o caminho de menor resistência."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Agrupamento de Tentação",
+        "simpleExplanation": "Vincular uma ação que você PRECISA fazer com uma ação que você QUER fazer.",
+        "analogy": "Só assistir sua série favorita enquanto estiver pedalando na bicicleta ergométrica."
+      },
+      {
+        "term": "Regra dos 2 Minutos",
+        "simpleExplanation": "Reduzir o limiar de entrada de qualquer novo hábito para 120 segundos.",
+        "analogy": "Abrir o caderno de estudos em vez de pensar em estudar 3 horas."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Dificuldade para beber água regularmente no trabalho.",
+        "actionableAdvice": "Coloque uma garrafa térmica cheia bem ao lado do teclado logo ao ligar o computador (Tornar Claro e Fácil)."
+      }
+    ],
+    "conclusion": "Grandes transformações não exigem medidas heróicas imediatas, mas sim a fidelidade inegociável aos micro-sistemas que você escolhe repetir todos os dias.",
+    "mindMap": {
+      "root": {
+        "id": "mm-ha-root",
+        "label": "Hábitos Atômicos",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Fundamentos",
+            "summary": "Ganhos marginais de 1% e o platô do potencial latente",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Efeito Composto",
+                "detail": "37x melhor ao final de 365 dias"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Sistemas vs Metas",
+                "detail": "Metas definem direção, sistemas produzem avanço"
+              }
+            ]
+          },
+          {
+            "id": "mm-b2",
+            "label": "As 4 Leis",
+            "summary": "O ciclo do hábito: Deixa, Desejo, Resposta e Recompensa",
+            "subBranches": [
+              {
+                "id": "mm-sb3",
+                "label": "1. Torne Claro",
+                "detail": "Intenção de implementação e empilhamento"
+              },
+              {
+                "id": "mm-sb4",
+                "label": "2. Torne Atraente",
+                "detail": "Cultura, pertencimento e tentação"
+              },
+              {
+                "id": "mm-sb5",
+                "label": "3. Torne Fácil",
+                "detail": "Menor atrito e regra dos 2 minutos"
+              },
+              {
+                "id": "mm-sb6",
+                "label": "4. Torne Satisfatório",
+                "detail": "Rastreador de hábitos e nunca quebre duas vezes"
+              }
+            ]
+          },
+          {
+            "id": "mm-b3",
+            "label": "Identidade",
+            "summary": "Mudança de dentro para fora",
+            "subBranches": [
+              {
+                "id": "mm-sb7",
+                "label": "Votos na Identidade",
+                "detail": "Toda escolha reafirma quem você é"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-ha-1",
+        "front": "Qual é a diferença entre metas e sistemas segundo James Clear?",
+        "back": "Metas dizem respeito aos resultados que você deseja alcançar; sistemas dizem respeito aos processos que levam a esses resultados.",
+        "hint": "Pense em direção versus jornada diária."
+      },
+      {
+        "id": "fc-ha-2",
+        "front": "O que diz a Regra dos 2 Minutos para novos hábitos?",
+        "back": "Ao começar um hábito, faça com que ele leve menos de 2 minutos para ser executado, garantindo a presença antes da otimização.",
+        "hint": "Redução drástica do atrito inicial."
+      },
+      {
+        "id": "fc-ha-3",
+        "front": "Quais são as 4 Leis da Mudança de Comportamento para criar um bom hábito?",
+        "back": "1. Torne-o claro\n2. Torne-o atraente\n3. Torne-o fácil\n4. Torne-o satisfatório",
+        "hint": "Quatro etapas do ciclo neural do hábito."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-ha-1",
+        "question": "Segundo o autor, o que acontece se você melhorar 1% a cada dia durante um ano?",
+        "options": [
+          "Você se torna cerca de 3,65 vezes melhor",
+          "Você se torna aproximadamente 37 vezes melhor",
+          "O resultado é puramente linear e pouco relevante",
+          "Você atinge um platô estático de rendimento"
+        ],
+        "correctIndex": 1,
+        "explanation": "Graças ao cálculo de juros compostos (1.01^365 ≈ 37.78), pequenos ganhos diários multiplicam o desempenho exponencialmente."
+      },
+      {
+        "id": "qz-ha-2",
+        "question": "Qual é o nível mais profundo e duradouro de mudança de comportamento?",
+        "options": [
+          "Mudança baseada apenas em recompensas financeiras",
+          "Mudança de resultados imediatos",
+          "Mudança baseada em identidade",
+          "Mudança baseada em pressão social externa"
+        ],
+        "correctIndex": 2,
+        "explanation": "A verdadeira mudança comportamental é a mudança de identidade: quando sua autoimagem se alinha ao hábito, mantê-lo deixa de ser um esforço."
+      },
+      {
+        "id": "qz-ha-3",
+        "question": "Como aplicar a 3ª Lei (Tornar Fácil) para eliminar um mau hábito?",
+        "options": [
+          "Tornando o mau hábito mais difícil, aumentando a fricção e os passos para realizá-lo",
+          "Colocando lembretes alarmantes por toda a casa",
+          "Tentando resistir exclusivamente com pura força de vontade",
+          "Punindo-se financeiramente a cada erro"
+        ],
+        "correctIndex": 0,
+        "explanation": "Para quebrar maus hábitos, inverta a 3ª lei: torne-o difícil. Crie atrito (ex.: desligar o roteador à noite ou desinstalar o app)."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Revisar os 4 passos do ciclo do hábito e identificar a deixa do seu hábito prioritário.",
+      "day3": "Praticar o empilhamento de hábitos: \"Depois de [hábito atual], eu farei [novo hábito]\".",
+      "day7": "Avaliar o nível de atrito do seu ambiente e remover uma distração frequente.",
+      "day14": "Revisar os flashcards e checar se o hábito foi mantido sem quebrar dois dias seguidos."
+    },
+    "coverColors": [
+      "#F59E0B",
+      "#EA580C",
+      "#DC2626"
+    ],
+    "order": 0
+  },
+  {
+    "id": "homem-mais-rico-babilonia",
+    "title": "O Homem Mais Rico da Babilônia",
+    "subtitle": "Os Segredos Antigos para a Riqueza Duradoura",
+    "author": "George S. Clason",
+    "category": "Finanças pessoais",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-yellow-500 via-amber-600 to-amber-900",
+    "listensCount": 22100,
+    "rating": 4.9,
+    "isFavorite": false,
+    "isPublicDomain": true,
+    "sourceType": "curated",
+    "createdAt": "2026-01-20T12:00:00Z",
+    "executiveSummary": "Através de parábolas clássicas ambientadas na antiga Babilônia, Arkad ensina as regras universais de acumulação de capital: pague a si mesmo primeiro (guardando no mínimo 10% do que ganha), controle os gastos, faça o dinheiro trabalhar e invista apenas com quem entende do assunto.",
+    "sections": [
+      {
+        "id": "hmrb-s1",
+        "title": "1. Comece a Fazer Sua Bolsa Engordar",
+        "timestampSeconds": 0,
+        "content": "Para cada dez moedas que você colocar em sua bolsa, retire para gastar apenas nove. Essa é a primeira e mais inviolável lei da riqueza: uma parte de tudo o que você ganha pertence a você para guardar.",
+        "practicalExample": "Ao receber seu salário, separe imediatamente 10% para investimentos antes de pagar contas.",
+        "keyQuote": "Uma parte de tudo o que você ganha pertence a você para guardar."
+      },
+      {
+        "id": "hmrb-s2",
+        "title": "2. Controle os Seus Gastos",
+        "timestampSeconds": 75,
+        "content": "Não confunda despesas necessárias com seus desejos. Nossos desejos sempre crescem na exata proporção de nossa renda, a menos que controlemos conscientemente os limites de nossos gastos.",
+        "practicalExample": "Revise assinaturas mensais e custos supérfluos que viraram rotina sem trazer real felicidade.",
+        "keyQuote": "As despesas chamadas \"obrigatórias\" sempre crescem na medida exata de nossos rendimentos."
+      },
+      {
+        "id": "hmrb-s3",
+        "title": "3. Faça o Seu Ouro Multiplicar",
+        "timestampSeconds": 150,
+        "content": "O ouro que fica parado é inútil. Cada moeda guardada deve se tornar um servo fiel que trabalha para você e cujos filhos e netos também trabalharão para gerar rendimentos contínuos.",
+        "practicalExample": "Reinvista os dividendos e juros em vez de gastá-los em bens depreciáveis.",
+        "keyQuote": "A riqueza de um homem não reside nas moedas que carrega no bolso, mas na renda contínua que constrói."
+      },
+      {
+        "id": "hmrb-s4",
+        "title": "4. Proteja o Seu Tesouro Contra Perdas",
+        "timestampSeconds": 225,
+        "content": "Não invista em promessas milagrosas de enriquecimento rápido. Busque conselhos apenas com aqueles que têm experiência comprovada no manejo e na segurança do capital.",
+        "practicalExample": "Evite especulações arriscadas oferecidas por aventureiros sem histórico consistente.",
+        "keyQuote": "Consulte os homens sábios. O conselho deles vale tanto quanto o ouro que você deseja proteger."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Pague a si mesmo primeiro",
+        "description": "Reserve no mínimo 10% de toda renda bruta auferida."
+      },
+      {
+        "title": "Desejos versus necessidades",
+        "description": "O padrão de vida deve ser inferior à capacidade de ganho."
+      },
+      {
+        "title": "Prudência nas decisões financeiras",
+        "description": "Não confie economias a quem não domina o setor onde opera."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Renda Passiva Babilônica",
+        "simpleExplanation": "Colocar o capital para render juros compostos contínuos.",
+        "analogy": "Trabalhadores invisíveis que rendem dia e noite mesmo enquanto você dorme."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Pessoa com renda de R$ 4.000 que chega ao fim do mês no zero a zero.",
+        "actionableAdvice": "Automatizar transferência de R$ 400 no dia do pagamento para conta de investimentos."
+      }
+    ],
+    "conclusion": "A disciplina e a paciência são as verdadeiras construtoras de fortunas duradouras, imutáveis desde as muralhas da antiga Babilônia.",
+    "mindMap": {
+      "root": {
+        "id": "mm-hmrb-root",
+        "label": "O Homem Mais Rico da Babilônia",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Sete Remédios para Bolsa Vazia",
+            "summary": "As práticas financeiras essenciais",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "10% para si",
+                "detail": "Pagar a si primeiro"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Controlar despesas",
+                "detail": "Vencer a inflação do estilo de vida"
+              },
+              {
+                "id": "mm-sb3",
+                "label": "Multiplicar o ouro",
+                "detail": "Poder dos rendimentos compostos"
+              },
+              {
+                "id": "mm-sb4",
+                "label": "Proteger o capital",
+                "detail": "Evitar ilusões de riqueza rápida"
+              }
+            ]
+          },
+          {
+            "id": "mm-b2",
+            "label": "As 5 Leis do Ouro",
+            "summary": "Como o dinheiro se atrai ou foge",
+            "subBranches": [
+              {
+                "id": "mm-sb5",
+                "label": "O ouro chega de bom grado",
+                "detail": "A quem economiza com consistência"
+              },
+              {
+                "id": "mm-sb6",
+                "label": "O ouro foge",
+                "detail": "De empreendimentos fraudulentos ou desconhecidos"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-hmrb-1",
+        "front": "Qual é a regra áurea de Arkad sobre a poupança individual?",
+        "back": "Guardar pelo menos um décimo (10%) de tudo o que ganha antes de efetuar qualquer gasto.",
+        "hint": "Fração decimal essencial."
+      },
+      {
+        "id": "fc-hmrb-2",
+        "front": "Por que não devemos investir apenas com base em promessas de ganhos astronômicos?",
+        "back": "Porque o ouro foge daqueles que exigem dele rendimentos impossíveis ou confiam em esquemas ilusórios.",
+        "hint": "Proteção contra perda de capital."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-hmrb-1",
+        "question": "Segundo o livro, para cada 10 moedas que entram na sua bolsa, quantas devem ser retiradas para gastos?",
+        "options": [
+          "Exatamente 10 moedas",
+          "No máximo 9 moedas",
+          "Apenas 5 moedas",
+          "11 moedas usando crédito"
+        ],
+        "correctIndex": 1,
+        "explanation": "Guardar 1 moeda em cada 10 garante que o tesouro pessoal cresça sistematicamente."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Calcular 10% da sua renda e automatizar o aporte para a reserva.",
+      "day3": "Identificar dois gastos recorrentes que decorrem de impulsos supérfluos.",
+      "day7": "Revisar onde seu capital está alocado e verificar a segurança dos ativos.",
+      "day14": "Avaliar os rendimentos obtidos e reinvesti-los integralmente."
+    },
+    "coverColors": [
+      "#EAB308",
+      "#D97706",
+      "#78350F"
+    ],
+    "order": 1
+  },
+  {
+    "id": "meditacoes-marco-aurelio",
+    "title": "Meditações para uma Mente Inabalável",
+    "subtitle": "O Guia Clássico do Imperador Filósofo",
+    "author": "Marco Aurélio",
+    "category": "Filosofia",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-slate-700 via-indigo-900 to-slate-950",
+    "listensCount": 18900,
+    "rating": 4.95,
+    "isFavorite": true,
+    "isPublicDomain": true,
+    "sourceType": "curated",
+    "createdAt": "2026-01-25T14:00:00Z",
+    "executiveSummary": "Diário íntimo do imperador romano mais poderoso do mundo, escrito nas fronteiras de guerra. Meditações é o alicerce do estoicismo: focar estritamente naquilo que está sob seu controle (pensamentos, atitudes e virtudes) e aceitar com serenidade o que independe de sua vontade.",
+    "sections": [
+      {
+        "id": "med-s1",
+        "title": "1. A Dicotomia do Controle",
+        "timestampSeconds": 0,
+        "content": "Você tem poder sobre sua mente, não sobre eventos externos. Perceba isso, e você encontrará uma força imensa. Acalmar a mente não significa mudar o mundo à sua volta, mas sim regular como você reage a cada circunstância.",
+        "practicalExample": "Diante de um atraso no trânsito, escolha não se enfurecer, pois a agitação não moverá os carros.",
+        "keyQuote": "Você tem poder sobre a sua mente, não sobre os acontecimentos externos. Compreenda isso e encontrará força."
+      },
+      {
+        "id": "med-s2",
+        "title": "2. Amor Fati: O Amor ao Destino",
+        "timestampSeconds": 75,
+        "content": "O fogo converte os obstáculos em chamas brilhantes. Tudo o que acontece, por mais adverso que pareça, é combustível para a virtude da paciência, da coragem e da resiliência.",
+        "practicalExample": "Encare um revés profissional como um treinamento intensivo de adaptação e inteligência tática.",
+        "keyQuote": "O que impede a ação favorece a ação. O que fica no caminho torna-se o caminho."
+      },
+      {
+        "id": "med-s3",
+        "title": "3. A Brevidade da Vida e Memento Mori",
+        "timestampSeconds": 150,
+        "content": "Não aja como se fosse viver dez mil anos. A morte está sempre ao alcance de sua mão. Enquanto vive, enquanto é possível, seja uma pessoa boa, justa e generosa.",
+        "practicalExample": "Lembre-se da finitude ao fim de cada dia para não guardar rancores nem adiar o que importa.",
+        "keyQuote": "Você poderia deixar a vida agora mesmo. Que isso determine o que você faz, diz e pensa."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Controle interno absoluto",
+        "description": "Ninguém pode perturbar sua paz sem a sua própria permissão."
+      },
+      {
+        "title": "Obstáculo como oportunidade",
+        "description": "A dificuldade traz a matéria-prima para o caráter."
+      },
+      {
+        "title": "Presença no agora",
+        "description": "O passado já não existe e o futuro é incerto; apenas o presente nos pertence."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Cidadela Interior",
+        "simpleExplanation": "O refúgio inexpugnável da mente que nenhuma tempestade externa pode abalar."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Receber uma crítica injusta ou agressiva de terceiros.",
+        "actionableAdvice": "Reconheça que o comportamento do outro pertence a ele, não a você; preserve sua integridade serena."
+      }
+    ],
+    "conclusion": "A verdadeira realeza não reside no domínio sobre impérios, mas no autodomínio sobre a própria consciência e no dever moral diário.",
+    "mindMap": {
+      "root": {
+        "id": "mm-med-root",
+        "label": "Meditações de Marco Aurélio",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Princípios Estoicos",
+            "summary": "Os pilares da serenidade",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Controle",
+                "detail": "Apenas a própria resposta depende de nós"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Obstáculo = Caminho",
+                "detail": "Transformar adversidade em virtude"
+              }
+            ]
+          },
+          {
+            "id": "mm-b2",
+            "label": "Perspectiva Cósmica",
+            "summary": "Humildade e mortalidade",
+            "subBranches": [
+              {
+                "id": "mm-sb3",
+                "label": "Memento Mori",
+                "detail": "A consciência da finitude gera foco"
+              },
+              {
+                "id": "mm-sb4",
+                "label": "Visão de Cima",
+                "detail": "Observar a pequenez dos dramas humanos"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-med-1",
+        "front": "O que significa a máxima \"O obstáculo é o caminho\"?",
+        "back": "Significa que a dificuldade em si proporciona a oportunidade exata para praticar paciência, coragem e adaptabilidade.",
+        "hint": "Alquimia estoica da mente."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-med-1",
+        "question": "Segundo o estoicismo de Marco Aurélio, sobre o que temos real controle?",
+        "options": [
+          "Sobre o comportamento dos outros e a economia",
+          "Sobre os nossos julgamentos, impulsos e escolhas internas",
+          "Sobre o sucesso financeiro e a opinião pública",
+          "Sobre os eventos naturais e o clima"
+        ],
+        "correctIndex": 1,
+        "explanation": "A mente e a vontade interior são os únicos domínios sob nosso controle total; o restante pertence ao destino."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Fazer uma pausa reflexiva matinal antecipando possíveis atritos do dia com calma.",
+      "day3": "Identificar um problema recente e perguntar: \"O que isso me permite exercitar?\".",
+      "day7": "Praticar o desapego de validação externa em uma tarefa importante.",
+      "day14": "Revisitar os ensinamentos sobre a brevidade do tempo."
+    },
+    "coverColors": [
+      "#334155",
+      "#312E81",
+      "#020617"
+    ],
+    "order": 2
+  },
+  {
+    "id": "arte-da-guerra",
+    "title": "A Arte da Guerra",
+    "subtitle": "Estratégia, Liderança e Visão de Longo Prazo",
+    "author": "Sun Tzu",
+    "category": "Negócios",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-red-700 via-rose-900 to-stone-900",
+    "listensCount": 31200,
+    "rating": 4.88,
+    "isFavorite": false,
+    "isPublicDomain": true,
+    "sourceType": "curated",
+    "createdAt": "2026-01-28T09:00:00Z",
+    "executiveSummary": "O tratado militar mais influente da história transcende os campos de batalha e oferece lições supremas para o mundo empresarial: a maior vitória é subjugar a resistência sem combater, conhecendo a si mesmo e ao adversário a fundo.",
+    "sections": [
+      {
+        "id": "ag-s1",
+        "title": "1. Conhecer a Si Mesmo e ao Inimigo",
+        "timestampSeconds": 0,
+        "content": "Se você conhece o inimigo e conhece a si mesmo, não precisa temer o resultado de cem batalhas. A ignorância sobre seus próprios pontos fracos é a causa primeira do fracasso nos negócios e na vida.",
+        "practicalExample": "Antes de lançar um produto, mapeie friamente seus gargalos operacionais e os diferenciais reais dos concorrentes.",
+        "keyQuote": "Conheça o inimigo e a si mesmo e em cem batalhas você nunca correrá perigo."
+      },
+      {
+        "id": "ag-s2",
+        "title": "2. Vencer Sem Lutar",
+        "timestampSeconds": 80,
+        "content": "A suprema arte da guerra consiste em derrotar o inimigo sem derramar uma gota de sangue. Estratégias que desgastam seus próprios recursos por guerras de preços ou atritos desnecessários geram vitórias pírricas.",
+        "practicalExample": "Crie uma proposta de valor única (oceano azul) em vez de disputar uma guerra destrutiva de preços.",
+        "keyQuote": "A suprema arte da guerra é derrotar o inimigo sem lutar."
+      },
+      {
+        "id": "ag-s3",
+        "title": "3. Adaptabilidade como a Água",
+        "timestampSeconds": 160,
+        "content": "Assim como a água adapta seu curso à configuração do terreno, um estrategista sábio adapta suas táticas de acordo com as mudanças rápidas do mercado e do ambiente.",
+        "practicalExample": "Pivote e ajuste sua estratégia quando os sinais do mercado mostrarem que o plano inicial já não funciona.",
+        "keyQuote": "As táticas militares são como a água corrente: evitam as alturas e correm para o vale."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Planejamento e inteligência prévia",
+        "description": "A vitória é calculada antes de começar o embate."
+      },
+      {
+        "title": "Economia de forças",
+        "description": "Evite disputas de atrito direto que enfraqueçam sua organização."
+      },
+      {
+        "title": "Velocidade e flexibilidade",
+        "description": "A rapidez na tomada de decisões desequilibra concorrentes lentos."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Shi (Ímpeto Estratégico)",
+        "simpleExplanation": "Criar uma posição tão favorável que o sucesso ocorra quase por gravidade natural."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Concorrente iniciando agressiva guerra de preços.",
+        "actionableAdvice": "Foque na experiência superior de atendimento e valor agregado em vez de comprometer sua margem de sobrevivência."
+      }
+    ],
+    "conclusion": "A verdadeira maestria estratégica consiste em antecipar cenários, manter a disciplina e vencer pelo posicionamento inteligente.",
+    "mindMap": {
+      "root": {
+        "id": "mm-ag-root",
+        "label": "A Arte da Guerra",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Avaliação & Cálculo",
+            "summary": "Medir as 5 variáveis fundamentais",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Caminho & Moral",
+                "detail": "Alinhamento da equipe com a missão"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Clima & Terreno",
+                "detail": "Condições do mercado e timing"
+              }
+            ]
+          },
+          {
+            "id": "mm-b2",
+            "label": "Táticas de Triunfo",
+            "summary": "Princípios de vitória ágil",
+            "subBranches": [
+              {
+                "id": "mm-sb3",
+                "label": "Vencer sem lutar",
+                "detail": "Posicionamento e alianças"
+              },
+              {
+                "id": "mm-sb4",
+                "label": "Fluidez como a água",
+                "detail": "Agilidade sem apego a dogmas"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-ag-1",
+        "front": "O que Sun Tzu considera a excelência suprema na estratégia militar?",
+        "back": "Subjugar o inimigo sem combater, quebrando a resistência antes do confronto direto.",
+        "hint": "Evitar o atrito desgastante."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-ag-1",
+        "question": "Segundo Sun Tzu, a quem se assemelham as melhores táticas operacionais?",
+        "options": [
+          "Ao fogo devastador",
+          "À pedra imóvel",
+          "À água corrente adaptável",
+          "Ao vento tempestuoso"
+        ],
+        "correctIndex": 2,
+        "explanation": "A água não tem forma permanente e contorna os obstáculos naturais com máxima eficiência."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Fazer o diagnóstico SWOT realista da sua equipe ou projeto.",
+      "day3": "Descobrir se você está entrando em conflitos desnecessários que drenam energia.",
+      "day7": "Analisar pontos fortes que ainda não foram plenamente explorados.",
+      "day14": "Revisitar os métodos de comunicação e alinhamento de liderança."
+    },
+    "coverColors": [
+      "#B91C1C",
+      "#881337",
+      "#1C1917"
+    ],
+    "order": 3
+  },
+  {
+    "id": "inteligencia-emocional",
+    "title": "Inteligência Emocional",
+    "subtitle": "Por Que Ela Importa Mais Que o QI",
+    "author": "Daniel Goleman",
+    "category": "Inteligência emocional",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-purple-600 via-violet-700 to-indigo-900",
+    "listensCount": 16800,
+    "rating": 4.91,
+    "isFavorite": true,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-01-30T16:00:00Z",
+    "executiveSummary": "Goleman revolucionou a psicologia ao demonstrar que habilidades como autoconhecimento, autorregulação, motivação intrínseca, empatia e destreza social são determinantes muito mais críticos para o sucesso e felicidade do que o raciocínio puramente analítico.",
+    "sections": [
+      {
+        "id": "ie-s1",
+        "title": "1. O Sequestro da Amígdala",
+        "timestampSeconds": 0,
+        "content": "A amígdala cerebral é nosso centro de alerta primitivo. Quando nos sentimos ameaçados, ela pode \"sequestrar\" nosso córtex pré-frontal em milissegundos, gerando reações explosivas antes mesmo de termos tempo para pensar com lucidez.",
+        "practicalExample": "Conte até 10 e respire fundo 3 vezes quando sentir raiva intensa em uma reunião de trabalho.",
+        "keyQuote": "Entre o estímulo e a resposta há um espaço. Nesse espaço reside nossa liberdade de escolha."
+      },
+      {
+        "id": "ie-s2",
+        "title": "2. Os Cinco Pilares da Inteligência Emocional",
+        "timestampSeconds": 80,
+        "content": "A inteligência emocional é composta por: 1) Autopercepção emocional; 2) Autocontrole; 3) Automotivação; 4) Empatia profunda; e 5) Habilidades sociais para resolver conflitos e inspirar cooperação.",
+        "practicalExample": "Dê nome exato ao que está sentindo: \"Estou ansioso por medo de julgamento\" em vez de um vago \"estou estressado\".",
+        "keyQuote": "Conhecer a si mesmo é o começo de toda a sabedoria humana."
+      },
+      {
+        "id": "ie-s3",
+        "title": "3. A Força da Empatia no Relacionamento",
+        "timestampSeconds": 160,
+        "content": "Empatia não é concordar com tudo o que o outro diz, mas sim compreender o quadro emocional a partir da perspectiva alheia. Líderes empáticos criam segurança psicológica e alto engajamento.",
+        "practicalExample": "Escute ativamente sem formular sua resposta enquanto o colega ainda está expondo suas dores.",
+        "keyQuote": "Liderança não é sobre dominar pessoas; é sobre a arte de motivá-las a agir pelo bem comum."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Autopercepção como bússola",
+        "description": "Reconhecer as emoções no exato instante em que emergem."
+      },
+      {
+        "title": "Autorregulação das respostas",
+        "description": "Não agir no calor do impulso reativo."
+      },
+      {
+        "title": "Empatia e sintonia social",
+        "description": "Saber ler a linguagem não-verbal e os sentimentos de terceiros."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Sequestro da Amígdala",
+        "simpleExplanation": "Disparo neuroquímico imediato de luta ou fuga que suspende a razão lógica temporariamente."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Discussão acalorada em família ou no ambiente corporativo.",
+        "actionableAdvice": "Pedir 5 minutos de pausa para que a frequência cardíaca baixe e o córtex pré-frontal retome a liderança."
+      }
+    ],
+    "conclusion": "O intelecto sem inteligência emocional é como um motor potente sem volante: gera aceleração, mas colide com facilidade nas curvas da convivência humana.",
+    "mindMap": {
+      "root": {
+        "id": "mm-ie-root",
+        "label": "Inteligência Emocional",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Competências Pessoais",
+            "summary": "Relação consigo mesmo",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Autoconsciência",
+                "detail": "Rotular sentimentos com precisão"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Autogestão",
+                "detail": "Pausa reflexiva ante impulsos"
+              },
+              {
+                "id": "mm-sb3",
+                "label": "Motivação",
+                "detail": "Foco em objetivos de longo prazo"
+              }
+            ]
+          },
+          {
+            "id": "mm-b2",
+            "label": "Competências Sociais",
+            "summary": "Relação com os outros",
+            "subBranches": [
+              {
+                "id": "mm-sb4",
+                "label": "Empatia",
+                "detail": "Sentir o mundo com os olhos alheios"
+              },
+              {
+                "id": "mm-sb5",
+                "label": "Destreza Social",
+                "detail": "Mediação de crises e persuasão positiva"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-ie-1",
+        "front": "O que é o fenômeno do sequestro da amígdala?",
+        "back": "É uma resposta emocional rápida e desproporcional disparada pela amígdala antes que o córtex pré-frontal consiga processar o evento com lógica.",
+        "hint": "Curto-circuito emocional primitivo."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-ie-1",
+        "question": "Qual é o primeiro pilar basilar da Inteligência Emocional segundo Daniel Goleman?",
+        "options": [
+          "Capacidade de manipular discussões",
+          "Autoconsciência (reconhecer os próprios sentimentos)",
+          "Ter facilidade com cálculos matemáticos",
+          "Ser extrovertido em eventos públicos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sem reconhecer o que você mesmo está sentindo em tempo real, é impossível gerir suas reações ou compreender os outros."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Monitorar os momentos de estresse do dia e anotar o gatilho inicial.",
+      "day3": "Praticar escuta com 100% de atenção em uma conversa sem interromper.",
+      "day7": "Aplicar a técnica do intervalo de 10 respirações antes de enviar um e-mail de resposta difícil.",
+      "day14": "Revisar suas 5 reações mais frequentes a frustrações."
+    },
+    "coverColors": [
+      "#9333EA",
+      "#6D28D9",
+      "#312E81"
+    ],
+    "order": 4
+  },
+  {
+    "id": "rapido-e-devagar",
+    "title": "Rápido e Devagar: Duas Formas de Pensar",
+    "subtitle": "As Engrenagens dos Vieses Cognitivos e Decisões",
+    "author": "Daniel Kahneman",
+    "category": "Psicologia",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-blue-700 via-cyan-800 to-slate-900",
+    "listensCount": 15400,
+    "rating": 4.93,
+    "isFavorite": false,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-01T11:00:00Z",
+    "executiveSummary": "Ganhador do Prêmio Nobel de Economia, Kahneman desvenda os dois sistemas que moldam o pensamento humano: o Sistema 1 (rápido, intuitivo e automático) e o Sistema 2 (lento, analítico e esforçado), alertando para as armadilhas dos vieses cognitivos.",
+    "sections": [
+      {
+        "id": "rd-s1",
+        "title": "1. Sistema 1 e Sistema 2",
+        "timestampSeconds": 0,
+        "content": "O Sistema 1 opera automaticamente sem esforço consciente (ex.: reconhecer raiva em um rosto). O Sistema 2 aloca atenção para operações mentais complexas (ex.: calcular 17 × 24). O Sistema 2 é preguiçoso e frequentemente aceita as intuições do Sistema 1 sem checar a veracidade.",
+        "practicalExample": "Não tome decisões financeiras complexas cansado ou com fome, momento em que o Sistema 2 desliga.",
+        "keyQuote": "Uma mente preguiçosa aceita a primeira resposta plausível sem questionar."
+      },
+      {
+        "id": "rd-s2",
+        "title": "2. A Ilusão da Certeza e WYSIATI",
+        "timestampSeconds": 80,
+        "content": "WYSIATI significa \"What You See Is All There Is\" (O que você vê é tudo o que existe). Nosso cérebro inventa narrativas coerentes com base em informações fragmentadas, ignorando a vasta quantidade de dados que desconhece.",
+        "practicalExample": "Ao analisar uma notícia impactante, pergunte-se: \"Quais informações cruciais estão omitidas nesta manchete?\".",
+        "keyQuote": "Nossa capacidade de construir histórias coerentes a partir de dados escassos gera confiança infundada."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Conheça suas limitações de energia mental",
+        "description": "O raciocínio crítico esgota glicose cerebral com rapidez."
+      },
+      {
+        "title": "Cuidado com a ancoragem",
+        "description": "O primeiro número que ouvimos enviesa desproporcionalmente qualquer estimativa."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Viés de Confirmação",
+        "simpleExplanation": "A tendência natural de buscar apenas evidências que comprovem nossa crença prévia."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Negociação salarial ou de compra de imóvel.",
+        "actionableAdvice": "Cuidado com o valor inicial pedido; ele funciona como âncora psicológica determinante se não for desafiado."
+      }
+    ],
+    "conclusion": "Aprender a reconhecer quando desacelerar o Sistema 1 e acionar o Sistema 2 é o divisor de águas entre decisões lúcidas e erros catastróficos.",
+    "mindMap": {
+      "root": {
+        "id": "mm-rd-root",
+        "label": "Rápido e Devagar",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "A Dualidade",
+            "summary": "Os dois motores cognitivos",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Sistema 1",
+                "detail": "Intuitivo, veloz, emocional, vulnerável a vieses"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Sistema 2",
+                "detail": "Crítico, lógico, lento, consome alta energia"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-rd-1",
+        "front": "O que define o Sistema 1 do cérebro?",
+        "back": "É rápido, automático, inconsciente e emocional, desenhado para decisões de sobrevivência com baixíssimo custo de energia.",
+        "hint": "O piloto automático mental."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-rd-1",
+        "question": "O que significa o acrônimo mental WYSIATI proposto por Kahneman?",
+        "options": [
+          "O que você vê é tudo o que existe (What You See Is All There Is)",
+          "Toda intuição rápida está sempre correta",
+          "Sistemas matemáticos superam a intuição",
+          "A visão humana tem alcance ilimitado"
+        ],
+        "correctIndex": 0,
+        "explanation": "O cérebro tira conclusões precipitadas com base unicamente nas informações disponíveis na sua frente, ignorando o desconhecido."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Identificar três decisões automáticas do dia feitas pelo Sistema 1.",
+      "day3": "Aplicar uma pausa para deliberar com o Sistema 2 antes de uma compra relevante.",
+      "day7": "Revisar situações em que a intuição falhou por falta de dados.",
+      "day14": "Refletir sobre o viés da ancoragem nas últimas semanas."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 5
+  },
+  {
+    "id": "de-zero-a-um",
+    "title": "De Zero a Um",
+    "subtitle": "Notas Sobre Startups, ou Como Construir o Futuro",
+    "author": "Peter Thiel",
+    "category": "Empreendedorismo",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-emerald-700 via-teal-800 to-slate-900",
+    "listensCount": 11900,
+    "rating": 4.87,
+    "isFavorite": false,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-05T13:00:00Z",
+    "executiveSummary": "Copiar o que já existe leva o mundo de 1 a n, gerando concorrência destrutiva. O verdadeiro valor empresarial surge quando você cria algo radicalmente novo, indo de 0 a 1 e construindo monopólios sustentáveis baseados em tecnologia proprietária, efeitos de rede e escala.",
+    "sections": [
+      {
+        "id": "dzo-s1",
+        "title": "1. O Progresso Vertical e o Segredo",
+        "timestampSeconds": 0,
+        "content": "O progresso horizontal significa globalização: pegar algo que funciona na China e copiar nos EUA. O progresso vertical significa tecnologia: fazer algo que ninguém jamais fez antes. Qual verdade importante pouquíssimas pessoas concordam com você?",
+        "practicalExample": "Busque resolver um problema que todos ignoram por preconceito ou comodismo.",
+        "keyQuote": "Toda vez que criamos algo novo, vamos de zero a um."
+      },
+      {
+        "id": "dzo-s2",
+        "title": "2. Monopólio Criativo vs Competição Perfeita",
+        "timestampSeconds": 85,
+        "content": "Na competição perfeita, os lucros são drenados até zero. Os monopólios criativos inventam categorias próprias e conseguem reinvestir seus lucros em inovação de ponta por décadas.",
+        "practicalExample": "Domine um nicho minúsculo primeiro antes de expandir para mercados maiores.",
+        "keyQuote": "Competição é para os perdedores. Construa um valor tão singular que ninguém consiga imitá-lo."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Domine um micro-nicho primeiro",
+        "description": "É muito mais fácil monopolizar um mercado pequeno e expandir depois."
+      },
+      {
+        "title": "Vantagens duradouras",
+        "description": "Tecnologia 10x melhor, efeitos de rede, economia de escala e marca."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Lei de Potência",
+        "simpleExplanation": "Um pequeno punhado de investimentos ou decisões gera a imensa maioria dos retornos exponenciais."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Lançar um novo software ou serviço online.",
+        "actionableAdvice": "Certifique-se de que a solução é pelo menos 10 vezes mais rápida, barata ou conveniente que o padrão atual."
+      }
+    ],
+    "conclusion": "O futuro não acontece por inércia; ele precisa de fundadores corajosos dispostos a apostar em ideias singulares que ainda não são óbvias.",
+    "mindMap": {
+      "root": {
+        "id": "mm-dzo-root",
+        "label": "De Zero a Um",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Inovação Radical",
+            "summary": "Sair da cópia de 1 a n",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Progresso Vertical",
+                "detail": "Tecnologia que cria novas fronteiras"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "A Pergunta Contrariana",
+                "detail": "Qual verdade só você enxerga?"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-dzo-1",
+        "front": "O que diferencia o progresso horizontal do progresso vertical?",
+        "back": "O horizontal copia coisas que já existem (1 a n); o vertical cria algo inteiramente novo através da tecnologia (0 a 1).",
+        "hint": "Globalização vs Tecnologia."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-dzo-1",
+        "question": "Segundo Peter Thiel, qual estratégia é ideal para uma nova startup nascente?",
+        "options": [
+          "Entrar imediatamente em um mercado multibilionário hipercompetitivo",
+          "Conquistar e dominar um mercado minúsculo primeiro",
+          "Copiar os produtos dos líderes de mercado sem alterações",
+          "Oferecer os preços mais baixos mesmo com prejuízo eterno"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dominar um micro-nicho permite alcançar escala, margens saudáveis e expandir concentricamente para mercados adjacentes."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Refletir sobre sua pergunta contrariana pessoal ou profissional.",
+      "day3": "Mapear se sua solução atual é 10x superior aos concorrentes diretos.",
+      "day7": "Analisar potenciais efeitos de rede no seu negócio.",
+      "day14": "Revisitar as 4 vantagens monopolísticas."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 6
+  },
+  {
+    "id": "quarta-revolucao-industrial",
+    "title": "A Quarta Revolução Industrial e a Era da IA",
+    "subtitle": "Impactos Tecnológicos, Sociais e Futuro do Trabalho",
+    "author": "Klaus Schwab",
+    "category": "Tecnologia",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-cyan-600 via-blue-700 to-indigo-950",
+    "listensCount": 9800,
+    "rating": 4.85,
+    "isFavorite": false,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-08T15:00:00Z",
+    "executiveSummary": "A fusão entre o mundo físico, digital e biológico através de Inteligência Artificial, robótica avançada, computação em nuvem e biotecnologia está transformando a velocidade com que a humanidade cria, se comunica e resolve crises globais.",
+    "sections": [
+      {
+        "id": "qri-s1",
+        "title": "1. A Velocidade Exponencial das Mudanças",
+        "timestampSeconds": 0,
+        "content": "Diferente das revoluções anteriores, a Quarta Revolução evolui em ritmo exponencial e não linear. Ela perturba indústrias inteiras em poucos anos e exige aprendizagem contínua para não se tornar obsoleto.",
+        "practicalExample": "Dedique pelo menos 3 horas por semana ao aprendizado de novas ferramentas de IA aplicadas à sua profissão.",
+        "keyQuote": "No novo mundo, não é o peixe grande que come o pequeno; é o peixe rápido que come o lento."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Lifelong Learning obrigatório",
+        "description": "A capacidade de desaprender e reaprender é a maior habilidade moderna."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Convergência Tecnológica",
+        "simpleExplanation": "Quando IA, sensores e biologia se integram para criar soluções antes impensáveis."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Profissional com rotina operacional repetitiva.",
+        "actionableAdvice": "Automatize tarefas burocráticas com agentes de IA e concentre seu tempo em julgamento crítico e empatia humana."
+      }
+    ],
+    "conclusion": "A tecnologia é um amplificador de intenções humanas; o futuro que ela moldará depende dos valores éticos que escolhermos programar nela.",
+    "mindMap": {
+      "root": {
+        "id": "mm-qri-root",
+        "label": "A Quarta Revolução Industrial",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Eixos Principais",
+            "summary": "Físico, Digital e Biológico",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "IA & Automação",
+                "detail": "Aceleração cognitiva"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Impacto Humano",
+                "detail": "Requalificação contínua de competências"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-qri-1",
+        "front": "O que caracteriza o ritmo da Quarta Revolução Industrial?",
+        "back": "Seu crescimento exponencial (em vez de linear) e o impacto simultâneo e interconectado em múltiplos setores.",
+        "hint": "Velocidade multiplicativa."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-qri-1",
+        "question": "Qual é a postura essencial para os profissionais na era da automação e IA?",
+        "options": [
+          "Resistir às novas ferramentas tecnológicas",
+          "Aprendizagem contínua e aprimoramento de habilidades exclusivamente humanas",
+          "Aguardar o governo definir as novas profissões",
+          "Abandonar completamente o trabalho intelectual"
+        ],
+        "correctIndex": 1,
+        "explanation": "A flexibilidade de adaptação e o foco em criatividade, empatia e tomada de decisão estratégica garantem relevância profissional."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Testar uma nova ferramenta de IA produtiva na sua rotina diária.",
+      "day3": "Mapear 3 tarefas repetitivas que podem ser delegadas.",
+      "day7": "Conversar com colegas sobre tendências do seu setor.",
+      "day14": "Avaliar os ganhos de produtividade obtidos."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 7
+  },
+  {
+    "id": "sapiens-historia-humanidade",
+    "title": "Sapiens: Uma Breve História da Humanidade",
+    "subtitle": "Da Idade da Pedra à Revolução Cognitiva e Científica",
+    "author": "Yuval Noah Harari",
+    "category": "História",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-stone-700 via-amber-900 to-stone-950",
+    "listensCount": 28400,
+    "rating": 4.96,
+    "isFavorite": true,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-10T10:00:00Z",
+    "executiveSummary": "Como uma espécie de primata insignificante da savana africana tornou-se dona do planeta Terra? Harari demonstra que nosso superpoder único reside na capacidade de cooperar flexivelmente em números astronômicos graças a realidades imaginadas (mitos, dinheiro, leis e nações).",
+    "sections": [
+      {
+        "id": "sap-s1",
+        "title": "1. A Revolução Cognitiva e a Ficção Compartilhada",
+        "timestampSeconds": 0,
+        "content": "Nenhum macaco troca uma banana por uma promessa de que receberá 10 bananas no céu. Os Homo sapiens conseguiram construir corporações, religiões e impérios porque milhões de estranhos acreditam na mesma narrativa compartilhada.",
+        "practicalExample": "Perceba que uma nota de R$ 100 só tem valor porque todos concordamos mutuamente em confiar nela.",
+        "keyQuote": "Você não pode convencer um chimpanzé a lhe dar uma banana prometendo bananas infinitas após a morte."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "A força dos mitos coletivos",
+        "description": "Dinheiro, nações e leis só funcionam enquanto sustentados pela crença mútua."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Realidade Imaginada",
+        "simpleExplanation": "Coisas que não existem fisicamente na natureza, mas que têm poder real porque todos acreditam nelas."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Liderar uma empresa ou causa coletiva.",
+        "actionableAdvice": "Una as pessoas em torno de um propósito e de uma história inspiradora clara que dê sentido aos esforços conjuntos."
+      }
+    ],
+    "conclusion": "Somos deuses auto-fabricados com o poder de transformar ecossistemas inteiros, o que exige responsabilidade ética sem precedentes.",
+    "mindMap": {
+      "root": {
+        "id": "mm-sap-root",
+        "label": "Sapiens",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "As 3 Grandes Revoluções",
+            "summary": "Marcos da evolução humana",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "1. Cognitiva",
+                "detail": "Ficção e cooperação em massa"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "2. Agrícola",
+                "detail": "A maior fraude da história ou base das cidades"
+              },
+              {
+                "id": "mm-sb3",
+                "label": "3. Científica",
+                "detail": "A admissão da ignorância gerou progresso"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-sap-1",
+        "front": "Qual foi o diferencial biológico e social que permitiu aos Homo sapiens dominar a Terra?",
+        "back": "A habilidade de criar e acreditar em realidades imaginadas e mitos compartilhados, permitindo a cooperação de milhões de indivíduos.",
+        "hint": "A linguagem das ficções."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-sap-1",
+        "question": "Segundo Harari, qual é a instituição de cooperação mais universal e bem-sucedida inventada pelos humanos?",
+        "options": [
+          "O dinheiro",
+          "As fronteiras territoriais",
+          "Os acordos militares",
+          "Os signos do zodíaco"
+        ],
+        "correctIndex": 0,
+        "explanation": "O dinheiro é a única crença em que mesmo pessoas de religiões, culturas e visões políticas opostas confiam integralmente."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Refletir sobre quais \"mitos compartilhados\" regem seu dia a dia profissional.",
+      "day3": "Observar a importância da confiança mútua em contratos e conversas.",
+      "day7": "Revisar a transição entre a revolução agrícola e a científica.",
+      "day14": "Examinar o impacto dos mitos na cultura contemporânea."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 8
+  },
+  {
+    "id": "por-que-nos-dormimos",
+    "title": "Por Que Nós Dormimos",
+    "subtitle": "A Nova Ciência do Sono e da Saúde Integral",
+    "author": "Matthew Walker",
+    "category": "Saúde e bem-estar",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-indigo-900 via-blue-950 to-slate-950",
+    "listensCount": 17200,
+    "rating": 4.92,
+    "isFavorite": false,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-12T08:00:00Z",
+    "executiveSummary": "O sono não é um desperdício de tempo, mas sim a mais poderosa ferramenta biológica de rejuvenescimento celular, consolidação de memória, estabilidade emocional e fortalecimento imunológico descoberta pela neurociência.",
+    "sections": [
+      {
+        "id": "pnd-s1",
+        "title": "1. O Escudo Protetor do Sono Profundo e REM",
+        "timestampSeconds": 0,
+        "content": "Durante o sono NREM profundo, o cérebro limpa toxinas metabólicas (como as placas beta-amiloides). Durante o sono REM, os sonhos processam traumas emocionais e fazem conexões criativas inesperadas entre ideias distantes.",
+        "practicalExample": "Garanta entre 7 e 8 horas de sono contínuo para não amputar a fase REM que acontece nas horas finais.",
+        "keyQuote": "O sono é o melhor elixir da juventude e da lucidez cognitiva que a natureza já criou."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Regularidade de horário",
+        "description": "Dormir e acordar no mesmo horário todos os dias sincroniza o ritmo circadiano."
+      },
+      {
+        "title": "Temperatura e escuridão",
+        "description": "O quarto frio e totalmente escuro estimula a secreção natural de melatonina."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Pressão do Sono (Adenosina)",
+        "simpleExplanation": "Substância química que se acumula a cada hora acordado, gerando vontade de dormir (e bloqueada temporariamente pela cafeína)."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Dificuldade para pegar no sono após horas no celular.",
+        "actionableAdvice": "Desligue telas luminosas e ative luzes amarelas suaves pelo menos 60 minutos antes de se deitar."
+      }
+    ],
+    "conclusion": "Priorizar o sono não é sinal de preguiça, mas o maior ato de inteligência biológica para maximizar foco, humor e longevidade.",
+    "mindMap": {
+      "root": {
+        "id": "mm-pnd-root",
+        "label": "Por Que Nós Dormimos",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Benefícios Críticos",
+            "summary": "O impacto biológico total",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Cérebro",
+                "detail": "Limpeza de toxinas e consolidação da memória"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Coração & Imunidade",
+                "detail": "Redução drástica do risco cardiovascular"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-pnd-1",
+        "front": "O que a cafeína faz com a sensação biológica de cansaço?",
+        "back": "A cafeína não elimina o cansaço; ela apenas mascara e bloqueia os receptores de adenosina no cérebro temporariamente.",
+        "hint": "Bloqueio de receptores químicos."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-pnd-1",
+        "question": "Qual é o hábito mais importante apontado pelo neurocientista Matthew Walker para melhorar a qualidade do sono?",
+        "options": [
+          "Beber café após o jantar",
+          "Manter regularidade estrita nos horários de dormir e acordar, inclusive aos finais de semana",
+          "Assistir a filmes de ação na cama para relaxar",
+          "Deixar a luz do quarto sempre acesa"
+        ],
+        "correctIndex": 1,
+        "explanation": "A regularidade ancora o ritmo circadiano biológico e otimiza a liberação natural de hormônios do sono."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Definir horário fixo para deitar e programar alarme de desaceleração 1 hora antes.",
+      "day3": "Cortar cafeína após as 14h.",
+      "day7": "Ajustar a ventilação e escuridão total do quarto.",
+      "day14": "Verificar a melhora de disposição e memória."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 9
+  },
+  {
+    "id": "aprendendo-a-aprender",
+    "title": "Aprendendo a Aprender",
+    "subtitle": "Como Superar a Procrastinação e Dominar Qualquer Disciplina",
+    "author": "Barbara Oakley",
+    "category": "Educação",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-emerald-600 via-teal-700 to-cyan-950",
+    "listensCount": 13800,
+    "rating": 4.89,
+    "isFavorite": false,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-15T09:00:00Z",
+    "executiveSummary": "Aprender não é uma questão de genialidade nata, mas de alternar conscientemente entre o Modo Focado (atenção direta e deliberada) e o Modo Difuso (redes neurais em repouso conectando ideias em segundo plano), usando repetição espaçada e combate ao autoengano.",
+    "sections": [
+      {
+        "id": "aa-s1",
+        "title": "1. O Modo Focado versus Modo Difuso",
+        "timestampSeconds": 0,
+        "content": "Quando você bate a cabeça em um problema difícil, forçar mais horas no modo focado só gera frustração. Dê uma caminhada ou durma: o modo difuso assumirá o controle em segundo plano e achará a rota criativa para a solução.",
+        "practicalExample": "Ao empacar em um código ou redação, faça uma pausa ativa de 15 minutos longe do computador.",
+        "keyQuote": "As maiores epifanias intelectuais ocorrem quando relaxamos o controle da atenção focada."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Recordação Ativa (Active Recall)",
+        "description": "Tentar lembrar do conteúdo com o livro fechado é 10x mais eficaz que reler passivamente."
+      },
+      {
+        "title": "Técnica Pomodoro contra a dor da procrastinação",
+        "description": "O cérebro sente dor ao iniciar tarefas indesejadas; focar apenas nos primeiros 25 minutos dissipa esse desconforto."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Ilusão de Competência",
+        "simpleExplanation": "Achar que aprendeu um assunto apenas porque o texto grifado parece familiar aos olhos."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Estudar para uma certificação ou concurso.",
+        "actionableAdvice": "Use flashcards e resolva exercícios práticos em vez de passar horas grifando apostilas com caneta marca-texto."
+      }
+    ],
+    "conclusion": "Dominar o processo de absorção de conhecimento transforma qualquer indivíduo em um aprendiz ágil capaz de prosperar em qualquer carreira.",
+    "mindMap": {
+      "root": {
+        "id": "mm-aa-root",
+        "label": "Aprendendo a Aprender",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Engrenagens Mentais",
+            "summary": "Alternância de estados",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "Modo Focado",
+                "detail": "Atenção pontual e lógica sequencial"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Modo Difuso",
+                "detail": "Criatividade livre e visão holística"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-aa-1",
+        "front": "O que é a ilusão de competência nos estudos?",
+        "back": "É o engano de acreditar que domina uma matéria só porque ela parece fácil enquanto você lê a resposta pronta.",
+        "hint": "A diferença entre reconhecimento e recordação."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-aa-1",
+        "question": "Qual técnica de estudo produz a maior retenção de memória de longo prazo comprovada pela neurociência?",
+        "options": [
+          "Reler o texto cinco vezes em sequência",
+          "Praticar recordação ativa e auto-testagem com o material fechado",
+          "Sublinhar o livro inteiro com cores diferentes",
+          "Ouvir a gravação enquanto assiste TV"
+        ],
+        "correctIndex": 1,
+        "explanation": "Forçar o cérebro a recuperar ativamente a informação da memória reconstrói e fortalece as sinapses duradouras."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Fazer uma sessão Pomodoro de 25 minutos testando recordação ativa.",
+      "day3": "Explicar o conceito aprendido para alguém leigo com palavras simples.",
+      "day7": "Revisitar os flashcards errados.",
+      "day14": "Realizar um simulado de questões sem consulta."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 10
+  },
+  {
+    "id": "como-pensar-com-clareza",
+    "title": "Como Pensar com Clareza e Tomar Decisões",
+    "subtitle": "Modelos Mentais Para Vencer o Ruído Diário",
+    "author": "Shane Parrish",
+    "category": "Desenvolvimento pessoal",
+    "format": "essential",
+    "estimatedMinutes": 5,
+    "coverGradient": "from-amber-600 via-rose-700 to-purple-900",
+    "listensCount": 12100,
+    "rating": 4.9,
+    "isFavorite": true,
+    "isPublicDomain": false,
+    "sourceType": "curated",
+    "createdAt": "2026-02-18T14:00:00Z",
+    "executiveSummary": "Nossa vida é a soma acumulada de nossas decisões cotidianas. Ao adotar modelos mentais fundamentais — como pensar em segunda ordem, inversão e círculos de competência —, blindamos nossa mente contra a pressa e a pressão de grupo.",
+    "sections": [
+      {
+        "id": "cpc-s1",
+        "title": "1. O Pensamento de Segunda Ordem",
+        "timestampSeconds": 0,
+        "content": "Pensadores comuns perguntam: \"O que acontece imediatamente se eu fizer isso?\". Pensadores extraordinários perguntam: \"E depois? E depois disso?\". Toda decisão tem efeitos secundários e terciários que muitas vezes anulam o benefício inicial.",
+        "practicalExample": "Cuidado com soluções fáceis que criam problemas muito maiores nos próximos meses.",
+        "keyQuote": "As consequências imediatas costumam ser opostas às consequências finais de longo prazo."
+      }
+    ],
+    "keyLearnings": [
+      {
+        "title": "Conheça seu círculo de competência",
+        "description": "Não finja entender de assuntos onde você não tem experiência real."
+      }
+    ],
+    "keyConcepts": [
+      {
+        "term": "Inversão",
+        "simpleExplanation": "Em vez de focar apenas em como ter sucesso, liste tudo o que garante o fracasso e evite conscientemente essas armadilhas."
+      }
+    ],
+    "practicalExamples": [
+      {
+        "scenario": "Avaliar proposta de parceria empresarial que parece boa demais.",
+        "actionableAdvice": "Faça um \"pre-mortem\": imagine que o projeto quebrou daqui a 1 ano e liste os prováveis motivos."
+      }
+    ],
+    "conclusion": "Clareza mental não é genialidade; é a recusa deliberada em agir no piloto automático do impulso irracional.",
+    "mindMap": {
+      "root": {
+        "id": "mm-cpc-root",
+        "label": "Modelos Mentais",
+        "branches": [
+          {
+            "id": "mm-b1",
+            "label": "Ferramentas de Decisão",
+            "summary": "Lentes para enxergar o real",
+            "subBranches": [
+              {
+                "id": "mm-sb1",
+                "label": "2ª Ordem",
+                "detail": "Consequências das consequências"
+              },
+              {
+                "id": "mm-sb2",
+                "label": "Inversão",
+                "detail": "Evitar o erro crasso antes de buscar o brilho"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": [
+      {
+        "id": "fc-cpc-1",
+        "front": "O que propõe o princípio da Inversão?",
+        "back": "Inverter o problema: em vez de buscar como ter sucesso, identificar com clareza como fracassar e eliminar ativamente essas causas.",
+        "hint": "Pensar de trás para a frente."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "qz-cpc-1",
+        "question": "Qual é o foco do pensamento de segunda ordem?",
+        "options": [
+          "Prever apenas o resultado imediato dos próximos 5 minutos",
+          "Antecipar as consequências secundárias e terciárias no longo prazo",
+          "Ignorar totalmente os efeitos colaterais de uma decisão",
+          "Pedir conselho para a maioria da multidão"
+        ],
+        "correctIndex": 1,
+        "explanation": "Grandes decisões ponderam os impactos que virão após a euforia ou alívio do primeiro momento."
+      }
+    ],
+    "reviewPlan": {
+      "day1": "Listar as possíveis consequências de segunda ordem de uma decisão pendente.",
+      "day3": "Aplicar a técnica da inversão em um hábito que deseja eliminar.",
+      "day7": "Delimitar seu círculo de competência em um tema recente.",
+      "day14": "Revisar se as escolhas do mês foram consistentes."
+    },
+    "coverColors": [
+      "#7C3AED",
+      "#4F46E5",
+      "#0B132B"
+    ],
+    "order": 11
+  }
+]

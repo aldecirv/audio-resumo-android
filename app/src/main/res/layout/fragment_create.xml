@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="120dp">
+
+        <TextView
+            style="@style/TextAppearance.Audio.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOTOR DE MICROAPRENDIZAGEM"
+            android:textColor="@color/brand" />
+
+        <TextView
+            style="@style/TextAppearance.Audio.H1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Transforme qualquer conteúdo em áudio"
+            android:textSize="24sp" />
+
+        <TextView
+            style="@style/TextAppearance.Audio.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Cole um texto ou importe um EPUB/PDF local. A IA cria resumo narrado, mapa mental, flashcards e quiz." />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Audio.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    style="@style/TextAppearance.Audio.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 · CONTEÚDO" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Audio.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:hint="Cole aqui o texto, artigo ou trecho do livro">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/contentInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLength="60000"
+                        android:paddingTop="12dp"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/importFile"
+                        style="@style/Widget.Audio.Button.Outlined"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:text="Importar EPUB/PDF"
+                        android:textSize="11.5sp"
+                        app:icon="@drawable/ic_file_upload"
+                        app:iconGravity="textStart"
+                        app:iconPadding="4dp"
+                        app:iconSize="17dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/exampleButton"
+                        style="@style/Widget.Audio.Button.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="6dp"
+                        android:text="Usar exemplo"
+                        android:textSize="11.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/TextAppearance.Audio.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="2 · PROFUNDIDADE" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/formatGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:chipSpacingHorizontal="6dp"
+            app:chipSpacingVertical="6dp"
+            app:singleLine="false"
+            app:singleSelection="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_gradient_primary"
+            android:fontFamily="@font/jakarta_semibold"
+            android:text="Gerar resumo em áudio"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:indicatorColor="@color/brand"
+            app:trackColor="@color/card_alt"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="4dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Sem chave Gemini? O modo local cria um resumo a partir do texto."
+            android:textSize="10.5sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/keyHint"
+            style="@style/Widget.Audio.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/surface"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_key"
+                    app:tint="@color/amber" />
+
+                <TextView
+                    style="@style/TextAppearance.Audio.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Adicione sua chave Gemini em Perfil para resumos mais profundos e PDFs digitalizados." />
+
+                <TextView
+                    android:id="@+id/openProfile"
+                    style="@style/TextAppearance.Audio.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Configurar"
+                    android:textColor="@color/brand" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/resultContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextAppearance.Audio.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESULTADO" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Audio.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:strokeColor="#4D8B5CF6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.audioresumo.app.ui.widgets.CoverView
+                            android:id="@+id/resultCover"
+                            android:layout_width="54dp"
+                            android:layout_height="58dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/resultTitle"
+                                style="@style/TextAppearance.Audio.H3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="Título do resumo" />
+
+                            <TextView
+                                android:id="@+id/resultMeta"
+                                style="@style/TextAppearance.Audio.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Essencial · 5 min · modo local" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/resultSummary"
+                        style="@style/TextAppearance.Audio.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="5"
+                        android:ellipsize="end"
+                        android:text="Resumo..." />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/listenResult"
+                            style="@style/Widget.Audio.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1"
+                            android:text="Ouvir agora"
+                            android:textSize="11.5sp"
+                            app:icon="@drawable/ic_play_arrow"
+                            app:iconSize="17dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/openResult"
+                            style="@style/Widget.Audio.Button.Outlined"
+                            android:layout_width="0dp"
+                            android:layout_height="46dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="Ver detalhes"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,1 @@
+-keep class com.audioresumo.app.data.** { *; }

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            style="@style/TextAppearance.Audio.H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Flashcards" />
+
+        <TextView
+            android:id="@+id/progressLabel"
+            style="@style/TextAppearance.Audio.Mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="1 / 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/studyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Hábitos Atômicos" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            style="@style/Widget.Audio.Card"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_marginTop="18dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/card"
+            app:strokeColor="#4D8B5CF6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="26dp">
+
+                <TextView
+                    android:id="@+id/sideLabel"
+                    style="@style/TextAppearance.Audio.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERGUNTA"
+                    android:textColor="@color/brand" />
+
+                <TextView
+                    android:id="@+id/cardText"
+                    style="@style/TextAppearance.Audio.H2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Pergunta do flashcard"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/hint"
+                    style="@style/TextAppearance.Audio.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="Toque no cartão para virar"
+                    android:textColor="@color/text_tertiary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/wrong"
+                style="@style/Widget.Audio.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:strokeColor="@color/rose"
+                android:text="Errei"
+                android:textColor="@color/rose" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/right"
+                style="@style/Widget.Audio.Button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/emerald"
+                android:text="Acertei"
+                android:textColor="@color/bg" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/counter"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Acertos: 0 · Erros: 0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resultContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <TextView
+            android:id="@+id/resultTitle"
+            style="@style/TextAppearance.Audio.H1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sessão concluída"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            style="@style/TextAppearance.Audio.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Você acertou 3 de 3 flashcards." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/restart"
+            style="@style/Widget.Audio.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:text="Revisar novamente" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close"
+            style="@style/Widget.Audio.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="Voltar"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

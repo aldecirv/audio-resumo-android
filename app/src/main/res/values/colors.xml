@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#070D1F</color>
+    <color name="bg_elevated">#0B132B</color>
+    <color name="surface">#101A2E</color>
+    <color name="card">#121B2F</color>
+    <color name="card_alt">#17223A</color>
+    <color name="border">#22304A</color>
+    <color name="divider">#1B2740</color>
+    <color name="brand">#8B5CF6</color>
+    <color name="brand_dark">#6D28D9</color>
+    <color name="indigo">#6366F1</color>
+    <color name="amber">#FBBF24</color>
+    <color name="emerald">#34D399</color>
+    <color name="rose">#FB7185</color>
+    <color name="cyan">#22D3EE</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#A8B3C7</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="overlay">#B3070D1F</color>
+    <color name="transparent">#00000000</color>
+    <color name="purple_900">#2E1065</color>
+    <color name="purple_800">#4C1D95</color>
+</resources>
