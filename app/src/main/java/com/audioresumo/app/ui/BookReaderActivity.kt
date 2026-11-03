@@ -46,7 +46,8 @@ class BookReaderActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         bookId = intent.getStringExtra(EXTRA_BOOK_ID) ?: run { finish(); return }
         chapterIndex = intent.getIntExtra(EXTRA_CHAPTER, 0)
-        book = BookStore.loadFull(bookId) ?: run { finish(); return }
+        // Metadados são leves; o texto do capítulo é lido sob demanda.
+        book = BookStore.byId(bookId) ?: run { finish(); return }
         binding.back.setOnClickListener { finish() }
         binding.btnPlay.setOnClickListener { togglePlay() }
         binding.btnPrevChapter.setOnClickListener { switchChapter(-1) }
@@ -116,7 +117,7 @@ class BookReaderActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         stopSpeaking()
         chapterIndex = index
         chapter = current.chapters[index]
-        val text = chapter?.text.orEmpty()
+        val text = BookStore.loadChapterText(current.id, index)
         binding.chapterTitle.text = chapter?.title ?: "Capítulo ${index + 1}"
         binding.toolbarTitle.text = current.title
         binding.chapterPosition.text = "${index + 1}/${current.chapters.size}"

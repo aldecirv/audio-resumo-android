@@ -234,11 +234,12 @@ object BookProcessor {
         chapterIndex: Int,
         onProgress: (Progress) -> Unit = {}
     ): Result<String> = withContext(Dispatchers.IO) {
-        val book = BookStore.loadFull(bookId) ?: return@withContext Result.failure(IllegalStateException("Livro não encontrado."))
-        val chapter = book.chapters.getOrNull(chapterIndex)
+        val book = BookStore.byId(bookId) ?: return@withContext Result.failure(IllegalStateException("Livro não encontrado."))
+        val chapterMeta = book.chapters.getOrNull(chapterIndex)
             ?: return@withContext Result.failure(IllegalArgumentException("Capítulo não encontrado."))
+        val chapter = chapterMeta.copy(text = BookStore.loadChapterText(bookId, chapterIndex))
         if (chapter.text.length < 80) return@withContext Result.failure(IllegalArgumentException("Capítulo sem texto suficiente."))
-        chapter.summaryStatus = "processing"
+        chapterMeta.summaryStatus = "processing"
         BookStore.updateMetadata(book)
         onProgress(Progress(5, "Preparando capítulo..."))
         var generated: AudioSummary? = null
@@ -286,7 +287,7 @@ object BookProcessor {
         if (generated == null) {
             val local = localChapter(book, chapter, chapterIndex, onProgress, if (aiAttempted) "IA indisponível" else null)
             if (local.isFailure) {
-                chapter.summaryStatus = "error"
+                chapterMeta.summaryStatus = "error"
                 BookStore.updateMetadata(book)
                 return@withContext Result.failure(local.exceptionOrNull() ?: IllegalStateException("Falha ao resumir capítulo."))
             }
@@ -294,8 +295,8 @@ object BookProcessor {
         }
         chapter.summaryId?.takeIf { it != generated.id }?.let { Store.removeSummary(it) }
         Store.addSummary(generated)
-        chapter.summaryId = generated.id
-        chapter.summaryStatus = "ready"
+        chapterMeta.summaryId = generated.id
+        chapterMeta.summaryStatus = "ready"
         BookStore.updateMetadata(book)
         onProgress(Progress(100, "Resumo do capítulo salvo"))
         Result.success(generated.id)

@@ -138,6 +138,6 @@ O CI (`.github/workflows/build.yml`) usa os mesmos secrets `AURORA_*` dos outros
 
 ## Versão
 
-**2.0.1** — plataforma completa de livros: importação de EPUB/PDF (texto + OCR)/DOCX/TXT/texto, biblioteca de livros, resumos do livro e por capítulo, leitor TTS, Q&A, busca, organização e durações 5/10/15/20 sem bloqueios.
+**2.0.2** — plataforma completa de livros: importação de EPUB/PDF (texto + OCR)/DOCX/TXT/texto, biblioteca de livros, resumos do livro e por capítulo, leitor TTS, Q&A, busca, organização e durações 5/10/15/20 sem bloqueios.
 
-APK: [**audio-resumo-2.0.1.apk**](https://github.com/aldecirv/audio-resumo-android/releases/download/v2.0.1/audio-resumo-2.0.1.apk) · [Release v2.0.1](https://github.com/aldecirv/audio-resumo-android/releases/tag/v2.0.1)
+APK: [**audio-resumo-2.0.2.apk**](https://github.com/aldecirv/audio-resumo-android/releases/download/v2.0.2/audio-resumo-2.0.2.apk) · [Release v2.0.2](https://github.com/aldecirv/audio-resumo-android/releases/tag/v2.0.2)
