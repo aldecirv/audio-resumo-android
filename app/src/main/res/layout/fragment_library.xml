@@ -50,10 +50,44 @@
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:background="@drawable/bg_gradient_primary"
-            android:contentDescription="Adicionar EPUB ou PDF"
+            android:contentDescription="Adicionar livro"
             android:padding="13dp"
             android:src="@drawable/ic_add"
             app:tint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_input"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tabSummaries"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_pill"
+            android:gravity="center"
+            android:text="Resumos"
+            android:textColor="@color/brand"
+            android:textSize="11.5sp" />
+
+        <TextView
+            android:id="@+id/tabBooks"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Livros"
+            android:textColor="@color/text_secondary"
+            android:textSize="11.5sp" />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -99,14 +133,14 @@
                     style="@style/TextAppearance.Audio.BodyStrong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adicionar EPUB ou PDF local"
+                    android:text="Adicionar livro ou documento"
                     android:textSize="12.5sp" />
 
                 <TextView
                     style="@style/TextAppearance.Audio.Caption"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Transforme seus arquivos em resumo narrado"
+                    android:text="EPUB, PDF com OCR, DOCX, TXT ou texto colado"
                     android:textSize="10.5sp" />
             </LinearLayout>
 
@@ -119,6 +153,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchLayout"
         style="@style/Widget.Audio.Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -143,6 +178,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <HorizontalScrollView
+        android:id="@+id/categoryScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -178,6 +214,17 @@
             android:text="12 resumos" />
 
         <ImageButton
+            android:id="@+id/bookSort"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Ordenar livros"
+            android:padding="10dp"
+            android:src="@drawable/ic_sort"
+            android:visibility="gone"
+            app:tint="@color/text_tertiary" />
+
+        <ImageButton
             android:id="@+id/favoriteFilter"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -189,6 +236,7 @@
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/summariesPane"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -234,6 +282,57 @@
                 android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="Ajuste a busca ou importe um EPUB/PDF local." />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/booksPane"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="20dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="120dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/bookEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_menu_book"
+                app:tint="@color/text_tertiary" />
+
+            <TextView
+                style="@style/TextAppearance.Audio.H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Sua biblioteca de livros está vazia" />
+
+            <TextView
+                style="@style/TextAppearance.Audio.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="Importe EPUB, PDF (com OCR), DOCX, TXT ou cole um texto. Sem livros fictícios." />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>

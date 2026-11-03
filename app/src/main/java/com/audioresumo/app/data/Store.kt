@@ -73,6 +73,14 @@ object Store {
         notifyChanged()
     }
 
+    fun removeSummary(id: String) {
+        summaries.removeAll { it.id == id }
+        persistSummaries()
+        notifyChanged()
+    }
+
+    fun visibleSummaries(): List<AudioSummary> = summaries.filter { it.parentBookId == null }
+
     fun toggleFavorite(id: String) {
         val summary = byId(id) ?: return
         summary.isFavorite = !summary.isFavorite
@@ -164,16 +172,17 @@ object Store {
 
     fun continueSummary(): AudioSummary? {
         val last = user.history.firstOrNull()?.summaryId
-        return last?.let(::byId) ?: summaries.firstOrNull()
+        return last?.let(::byId)?.takeIf { it.parentBookId == null }
+            ?: visibleSummaries().firstOrNull()
     }
 
-    fun featured(): AudioSummary? = summaries.maxByOrNull { it.listensCount }
+    fun featured(): AudioSummary? = visibleSummaries().maxByOrNull { it.listensCount }
 
     fun trending(limit: Int = 6): List<AudioSummary> =
-        summaries.sortedByDescending { it.listensCount }.take(limit)
+        visibleSummaries().sortedByDescending { it.listensCount }.take(limit)
 
     fun quickListens(limit: Int = 6): List<AudioSummary> =
-        summaries.filter { it.estimatedMinutes <= 5 }.take(limit)
+        visibleSummaries().filter { it.estimatedMinutes <= 5 }.take(limit)
 
     private fun persistSummaries() {
         val arr = JSONArray()
@@ -328,7 +337,11 @@ object Store {
             quizTotal = o.optInt("quizTotal", 0),
             sourceType = o.optString("sourceType", "curated"),
             isUserGenerated = o.optBoolean("isUserGenerated", false),
-            createdAt = o.optString("createdAt", isoNow())
+            createdAt = o.optString("createdAt", isoNow()),
+            parentBookId = o.optString("parentBookId").takeIf { it.isNotBlank() && it != "null" },
+            chapterIndex = o.optInt("chapterIndex", -1).takeIf { it >= 0 },
+            isBookSummary = o.optBoolean("isBookSummary", false),
+            summaryMinutes = o.optInt("summaryMinutes", 0)
         )
     }
 
@@ -341,6 +354,10 @@ object Store {
         put("progressSeconds", s.progressSeconds); put("quizCorrect", s.quizCorrect)
         put("quizTotal", s.quizTotal); put("sourceType", s.sourceType)
         put("isUserGenerated", s.isUserGenerated); put("createdAt", s.createdAt)
+        put("parentBookId", s.parentBookId ?: JSONObject.NULL)
+        put("chapterIndex", s.chapterIndex ?: -1)
+        put("isBookSummary", s.isBookSummary)
+        put("summaryMinutes", s.summaryMinutes)
         put("sections", JSONArray().apply {
             s.sections.forEach { x ->
                 put(JSONObject().apply {

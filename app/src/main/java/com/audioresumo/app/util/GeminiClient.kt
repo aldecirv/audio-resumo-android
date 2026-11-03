@@ -27,20 +27,22 @@ object GeminiClient {
         mimeType: String? = null,
         format: String = "essential",
         sourceType: String = "text",
-        titleHint: String = ""
+        titleHint: String = "",
+        minutesOverride: Int? = null,
+        authorHint: String = ""
     ): Result<AudioSummary> = withContext(Dispatchers.IO) {
         val key = Store.settings.apiKey.trim()
         if (key.isBlank()) return@withContext Result.failure(IllegalStateException("Chave Gemini não configurada."))
         if (text.length < 80 && fileBytes == null) {
             return@withContext Result.failure(IllegalArgumentException("Conteúdo muito curto para gerar um resumo."))
         }
-        val minutes = when (format) {
+        val minutes = minutesOverride ?: when (format) {
             "quick" -> 2
             "complete" -> 10
             "deep" -> 20
             else -> 5
         }
-        val prompt = buildPrompt(format, minutes, sourceType, titleHint, text)
+        val prompt = buildPrompt(format, minutes, sourceType, titleHint, text, authorHint)
         val parts = JSONArray().put(JSONObject().put("text", prompt))
         if (fileBytes != null && mimeType != null) {
             if (fileBytes.size > 15 * 1024 * 1024) {
@@ -93,9 +95,49 @@ object GeminiClient {
                     id = "ai-${UUID.randomUUID()}",
                     sourceType = sourceType,
                     isUserGenerated = true,
-                    author = summary.author.ifBlank { "Conteúdo enviado" },
+                    author = summary.author.ifBlank { authorHint.ifBlank { "Conteúdo enviado" } },
                     createdAt = java.time.Instant.now().toString()
                 )
+            }
+        }
+    }
+
+    /** Chamada textual (sem schema) para map-reduce, respostas e Q&A. */
+    suspend fun complete(
+        context: android.content.Context,
+        system: String,
+        user: String
+    ): Result<String> = withContext(Dispatchers.IO) {
+        runCatching {
+            val key = Store.settings.apiKey.trim()
+            if (key.isBlank()) throw IllegalStateException("Chave Gemini não configurada.")
+            val body = JSONObject().apply {
+                put("systemInstruction", JSONObject().put("parts", JSONArray().put(JSONObject().put("text", system))))
+                put("contents", JSONArray().put(JSONObject().put("parts", JSONArray().put(JSONObject().put("text", user)))))
+                put("generationConfig", JSONObject().put("temperature", 0.35).put("maxOutputTokens", 4096))
+            }.toString()
+            val model = Store.settings.model.ifBlank { "gemini-2.5-flash" }
+            val request = Request.Builder()
+                .url("https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$key")
+                .post(body.toRequestBody("application/json".toMediaType()))
+                .build()
+            client.newCall(request).execute().use { response ->
+                val raw = response.body?.string().orEmpty()
+                if (!response.isSuccessful) {
+                    val message = runCatching { JSONObject(raw).optJSONObject("error")?.optString("message") }
+                        .getOrNull().orEmpty()
+                    throw IllegalStateException("Gemini ${response.code}: ${message.ifBlank { "falha na requisição" }}")
+                }
+                val root = JSONObject(raw)
+                val content = root.optJSONArray("candidates")
+                    ?.optJSONObject(0)
+                    ?.optJSONObject("content")
+                    ?.optJSONArray("parts")
+                    ?.optJSONObject(0)
+                    ?.optString("text")
+                    .orEmpty()
+                if (content.isBlank()) throw IllegalStateException("A IA não retornou conteúdo.")
+                content
             }
         }
     }
@@ -114,11 +156,13 @@ object GeminiClient {
         minutes: Int,
         sourceType: String,
         titleHint: String,
-        text: String
+        text: String,
+        authorHint: String = ""
     ): String = """
         Você é um especialista brasileiro em microaprendizagem e resumos de livros.
         Crie um resumo em português do Brasil, no formato "$format" (cerca de $minutes minutos de áudio), a partir do conteúdo abaixo.
         ${if (titleHint.isNotBlank()) "Título provável do material: $titleHint." else ""}
+        ${if (authorHint.isNotBlank()) "Autor: $authorHint." else ""}
         O resumo precisa ser fiel ao conteúdo, prático e claro. Não invente fatos.
 
         Responda APENAS com um objeto JSON válido, sem markdown, neste schema:

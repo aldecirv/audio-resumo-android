@@ -24,6 +24,7 @@ class CoverView @JvmOverloads constructor(
 
     private var colors = listOf("#8B5CF6", "#6366F1", "#0B132B")
     private var title = "A"
+    private var label = "ÁUDIO DE RESUMO"
     private val bgPaint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val circlePaint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -45,9 +46,10 @@ class CoverView @JvmOverloads constructor(
         bind(summary.title, summary.coverColors)
     }
 
-    fun bind(title: String, colors: List<String>) {
+    fun bind(title: String, colors: List<String>, label: String = "ÁUDIO DE RESUMO") {
         this.title = title
         this.colors = colors
+        this.label = label
         invalidate()
     }
 
@@ -78,7 +80,6 @@ class CoverView @JvmOverloads constructor(
         canvas.drawText(initial, width / 2f, height * 0.55f, textPaint)
 
         if (width >= dp(110f)) {
-            val label = "ÁUDIO DE RESUMO"
             labelPaint.textSize = maxOf(7.5f * resources.displayMetrics.scaledDensity, width * 0.055f)
             canvas.drawText(label, width / 2f, height * 0.9f, labelPaint)
         }

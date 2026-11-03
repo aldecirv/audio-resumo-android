@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
     <queries>
         <intent>
@@ -21,6 +22,10 @@
         android:roundIcon="@drawable/ic_launcher_legacy"
         android:supportsRtl="true"
         android:theme="@style/Theme.AudioResumo">
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="text_recognition" />
 
         <activity
             android:name=".ui.SplashActivity"
@@ -39,10 +44,23 @@
         <activity android:name=".ui.FlashcardsActivity" android:exported="false" />
         <activity android:name=".ui.QuizActivity" android:exported="false" />
         <activity android:name=".ui.ReviewPlanActivity" android:exported="false" />
+        <activity android:name=".ui.BookDetailActivity" android:exported="false" />
+        <activity android:name=".ui.BookReaderActivity" android:exported="false" />
+        <activity android:name=".ui.BookQaActivity" android:exported="false" />
+        <activity android:name=".ui.BookImportActivity" android:exported="false" />
 
         <service
             android:name=".service.SpeechService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
+
+        <service
+            android:name=".service.BookProcessingService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="book_summary_processing" />
+        </service>
     </application>
 </manifest>

@@ -13,8 +13,8 @@ android {
         applicationId = "com.audioresumo.app"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "2.0.0"
         vectorDrawables { useSupportLibrary = true }
     }
 
@@ -63,6 +63,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+
+    // OCR offline para PDFs digitalizados.
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.3")
 
     testImplementation("junit:junit:4.13.2")

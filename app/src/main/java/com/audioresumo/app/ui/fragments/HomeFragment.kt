@@ -66,7 +66,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        val featured = Store.featured() ?: Store.summaries.firstOrNull()
+        val featured = Store.featured() ?: Store.visibleSummaries().firstOrNull()
         if (featured == null) {
             binding.featuredCard.visibility = View.GONE
         } else {

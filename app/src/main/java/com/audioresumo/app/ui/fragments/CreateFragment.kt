@@ -29,6 +29,7 @@ class CreateFragment : Fragment() {
     private var _binding: FragmentCreateBinding? = null
     private val binding get() = _binding!!
     private var format = "essential"
+    private var minutes = 5
     private var pendingDocument: ImportFlow.Document? = null
     private var result: AudioSummary? = null
     private var busy = false
@@ -64,15 +65,16 @@ class CreateFragment : Fragment() {
 
     private fun buildFormatChips() {
         val formats = listOf(
-            "quick" to "Rápido",
-            "essential" to "Essencial",
-            "complete" to "Completo",
-            "deep" to "Profundo"
+            "essential" to "5 min",
+            "complete" to "10 min",
+            "deep" to "15 min",
+            "deep" to "20 min"
         )
         binding.formatGroup.removeAllViews()
-        formats.forEach { (value, label) ->
+        formats.forEachIndexed { index, (value, label) ->
             val chip = Chip(requireContext()).apply {
                 text = label
+                tag = listOf(5, 10, 15, 20)[index]
                 isCheckable = true
                 isChecked = value == format
                 textSize = 11f
@@ -84,17 +86,12 @@ class CreateFragment : Fragment() {
                 isCheckedIconVisible = false
                 setOnClickListener {
                     format = value
+                    minutes = (tag as Int)
                     for (i in 0 until binding.formatGroup.childCount) {
                         val c = binding.formatGroup.getChildAt(i) as Chip
                         c.isChecked = c === this
                     }
-                    val minutes = when (value) {
-                        "quick" -> 2
-                        "complete" -> 10
-                        "deep" -> 20
-                        else -> 5
-                    }
-                    binding.statusText.text = "Formato $label · cerca de $minutes min de áudio"
+                    binding.statusText.text = "Duração $label · sem bloqueios"
                 }
             }
             binding.formatGroup.addView(chip)
@@ -165,7 +162,8 @@ class CreateFragment : Fragment() {
                     mimeType = if (document?.bytes != null) document.mime else null,
                     format = format,
                     sourceType = document?.kind?.lowercase() ?: "text",
-                    titleHint = document?.title.orEmpty()
+                    titleHint = document?.title.orEmpty(),
+                    minutesOverride = minutes
                 )
                 if (ai.isSuccess) summary = ai.getOrNull()
             }
@@ -175,7 +173,8 @@ class CreateFragment : Fragment() {
                     title = document?.title.orEmpty(),
                     author = document?.author.orEmpty(),
                     format = format,
-                    sourceType = document?.kind?.lowercase() ?: "text"
+                    sourceType = document?.kind?.lowercase() ?: "text",
+                    minutesOverride = minutes
                 )
                 summary = local.getOrNull()
                 usedLocal = true

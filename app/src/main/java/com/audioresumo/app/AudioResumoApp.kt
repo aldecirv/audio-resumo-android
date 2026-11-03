@@ -9,5 +9,6 @@ class AudioResumoApp : Application() {
         super.onCreate()
         PDFBoxResourceLoader.init(this)
         Store.init(this)
+        com.audioresumo.app.data.BookStore.init(this)
     }
 }

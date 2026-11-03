@@ -8,6 +8,7 @@
     <color name="border">#22304A</color>
     <color name="divider">#1B2740</color>
     <color name="brand">#8B5CF6</color>
+    <color name="brand_indigo">#6366F1</color>
     <color name="brand_dark">#6D28D9</color>
     <color name="indigo">#6366F1</color>
     <color name="amber">#FBBF24</color>

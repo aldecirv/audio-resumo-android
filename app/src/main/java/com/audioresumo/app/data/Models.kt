@@ -87,7 +87,11 @@ data class AudioSummary(
     var quizTotal: Int = 0,
     val sourceType: String = "curated",
     val isUserGenerated: Boolean = false,
-    val createdAt: String = Instant.now().toString()
+    val createdAt: String = Instant.now().toString(),
+    val parentBookId: String? = null,
+    val chapterIndex: Int? = null,
+    val isBookSummary: Boolean = false,
+    val summaryMinutes: Int = 0
 ) {
     val formatLabel: String
         get() = when (format) {

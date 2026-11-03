@@ -27,7 +27,7 @@ class LearnFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        current = Store.continueSummary() ?: Store.summaries.firstOrNull()
+        current = Store.continueSummary() ?: Store.visibleSummaries().firstOrNull()
         binding.switchSummary.setOnClickListener { chooseSummary() }
         binding.learnSummaryCard.setOnClickListener { current?.let { startActivity(com.audioresumo.app.ui.SummaryDetailActivity.intent(requireContext(), it.id)) } }
         binding.tileMindMap.setOnClickListener { current?.let { startActivity(MindMapActivity.intent(requireContext(), it.id)) } }
@@ -39,26 +39,26 @@ class LearnFragment : Fragment() {
 
     fun refresh() {
         if (_binding == null) return
-        if (current == null) current = Store.continueSummary() ?: Store.summaries.firstOrNull()
+        if (current == null) current = Store.continueSummary() ?: Store.visibleSummaries().firstOrNull()
         val summary = current
         if (summary != null) {
             binding.learnCover.bind(summary)
             binding.learnTitle.text = summary.title
             binding.learnAuthor.text = "${summary.author} · ${summary.flashcards.size} flashcards · ${summary.quiz.size} perguntas"
         }
-        binding.statSummaries.text = Store.summaries.size.toString()
+        binding.statSummaries.text = Store.visibleSummaries().size.toString()
         binding.statMinutes.text = "${Store.user.totalAudioMinutes}m"
         binding.statQuiz.text = Store.user.completedQuizzes.toString()
     }
 
     private fun chooseSummary() {
-        val items = Store.summaries.map { "${it.title} · ${it.author}" }.toTypedArray()
+        val items = Store.visibleSummaries().map { "${it.title} · ${it.author}" }.toTypedArray()
         if (items.isEmpty()) return
-        val index = Store.summaries.indexOfFirst { it.id == current?.id }.coerceAtLeast(0)
+        val index = Store.visibleSummaries().indexOfFirst { it.id == current?.id }.coerceAtLeast(0)
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Escolha o resumo para estudar")
             .setSingleChoiceItems(items, index) { dialog, which ->
-                current = Store.summaries[which]
+                current = Store.visibleSummaries()[which]
                 dialog.dismiss()
                 refresh()
             }

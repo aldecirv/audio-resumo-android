@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/card"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.audioresumo.app.ui.widgets.CoverView
+            android:id="@+id/cover"
+            android:layout_width="58dp"
+            android:layout_height="68dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.Audio.H3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Título do livro"
+                android:textSize="13.5sp" />
+
+            <TextView
+                android:id="@+id/author"
+                style="@style/TextAppearance.Audio.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Autor" />
+
+            <TextView
+                android:id="@+id/meta"
+                style="@style/TextAppearance.Audio.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="EPUB · 12 capítulos · 45 mil palavras"
+                android:textColor="@color/text_tertiary"
+                android:textSize="10sp" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:indicatorColor="@color/brand_indigo"
+                app:trackColor="@color/card_alt"
+                app:trackCornerRadius="3dp"
+                app:trackThickness="3dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Opções do livro"
+            android:padding="9dp"
+            android:src="@drawable/ic_more_vert"
+            app:tint="@color/text_tertiary" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

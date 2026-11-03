@@ -30,7 +30,8 @@ object LocalSummarizer {
         title: String = "",
         author: String = "",
         format: String = "essential",
-        sourceType: String = "text"
+        sourceType: String = "text",
+        minutesOverride: Int? = null
     ): Result<AudioSummary> {
         val clean = cleanText(text)
         if (clean.length < 120) {
@@ -40,13 +41,13 @@ object LocalSummarizer {
         if (sentences.size < 3) {
             return Result.failure(IllegalArgumentException("Não há frases suficientes para resumir este conteúdo."))
         }
-        val minutes = when (format) {
+        val minutes = minutesOverride ?: when (format) {
             "quick" -> 2
             "complete" -> 10
             "deep" -> 20
             else -> 5
         }
-        val chunks = chunk(sentences, if (format == "quick") 3 else 4)
+        val chunks = chunk(sentences, if (minutes <= 5) 3 else 4)
         val sectionTitles = listOf("Ideia central", "Como funciona", "Aplicação prática", "Aprofundamento").take(chunks.size)
         val sections = chunks.mapIndexed { index, part ->
             val content = part.joinToString(" ").take(1400)

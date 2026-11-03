@@ -3,13 +3,32 @@
 [![Release](https://img.shields.io/github/v/release/aldecirv/audio-resumo-android?color=8B5CF6)](https://github.com/aldecirv/audio-resumo-android/releases/latest)
 [![Build APK](https://github.com/aldecirv/audio-resumo-android/actions/workflows/build.yml/badge.svg)](https://github.com/aldecirv/audio-resumo-android/actions/workflows/build.yml)
 
-Aplicativo Android nativo de **microaprendizagem em áudio**: resumos de livros, PDFs e EPUBs com narração por TTS, mapa mental, flashcards, quiz e plano de revisão. Convertido do app web React/Express para **Kotlin + XML + Material 3**, com dados locais e IA opcional.
+Aplicativo Android nativo de **leitura, resumo e aprendizagem com IA**: importe **livros completos** (EPUB, PDF com texto ou OCR, DOCX, TXT e texto colado), leia por capítulos, ouça a narração, gere resumos do livro e de cada capítulo, faça perguntas ao livro e estude com mapa mental, flashcards e quiz.
+
+Convertido do app web React/Express para **Kotlin + XML + Material 3**, com dados locais, processamento em blocos e IA opcional.
 
 ![Home](docs/screenshots/home.png)
 
+## Auditoria
+
+O projeto passou por uma auditoria antes desta atualização. O relatório com recursos bloqueados/incompletos e o que foi implementado está em [AUDIT.md](AUDIT.md).
+
 ## Recursos
 
-- **Biblioteca curada** com 12 resumos (Hábitos Atômicos, A Arte da Guerra, Sapiens, Inteligência Emocional e outros), busca, categorias, favoritos e progresso.
+- **Biblioteca de livros** separada dos resumos curados: importe, pesquise, favorite, ordene, renomeie e exclua livros.
+- **Importação de livros completos**:
+  - **EPUB** por capítulos do spine/OPF, preservando a ordem;
+  - **PDF com texto** extraído página a página;
+  - **PDF digitalizado com OCR** (ML Kit via Google Play Services + PdfRenderer, processamento local por página);
+  - **DOCX** (parágrafos e metadados);
+  - **TXT** e **texto colado**;
+  - sem limite artificial de páginas; somente limites técnicos de memória/tamanho e processamento em blocos.
+- **Resumo do livro inteiro** por map-reduce em blocos (Gemini) com progresso real, retomada e fallback local claramente identificado.
+- **Resumo individual por capítulo**, com áudio, mapa mental, flashcards e quiz reaproveitando o módulo de aprendizagem.
+- **Leitor por capítulo** com narração TTS, velocidade, avanço automático de capítulos e retomada de posição.
+- **Perguntas e respostas** sobre o livro, com citação de capítulos; modo local extrativo quando não há chave.
+- **Durações 5, 10, 15 e 20 minutos**, todas disponíveis sem paywall ou bloqueio.
+- **Biblioteca curada** com 12 resumos editoriais (Hábitos Atômicos, A Arte da Guerra, Sapiens etc.), claramente separados dos livros importados.
 - **Player de áudio nativo** com `TextToSpeech` em pt-BR:
   - reprodução em segundo plano com notificação e controles;
   - velocidade 0,75x–2,0x, soneca, marcadores e transcrição sincronizada;
@@ -18,12 +37,12 @@ Aplicativo Android nativo de **microaprendizagem em áudio**: resumos de livros,
   - cole um texto ou importe um arquivo e gere resumo, mapa mental, flashcards e quiz com Gemini;
   - **modo local offline** (extrativo) quando não há chave configurada;
   - chave e modelo configuráveis em **Perfil** (armazenados apenas no aparelho).
-- **Importação local de EPUB e PDF**:
-  - botão **+** e cartão **“Adicionar EPUB ou PDF local”** na Biblioteca;
+- **Importação local e leitura**:
+  - botão **+** e cartão **“Adicionar livro ou documento”** na Biblioteca;
   - EPUB: leitura de `container.xml`, OPF, spine e capítulos XHTML;
-  - PDF: extração de texto com PDFBox;
-  - PDFs digitalizados (sem texto) podem ser enviados ao Gemini quando há chave;
-  - o resumo é salvo na biblioteca e aberto em seguida.
+  - PDF: extração de texto com PDFBox e OCR local para páginas digitalizadas;
+  - DOCX e TXT;
+  - livro salvo no aparelho antes da geração do resumo; texto por capítulo em arquivos separados.
 - **Aprendizagem ativa**: mapa mental radial, flashcards com virar de cartão e quiz com correção/explicação e pontuação salva.
 - **Plano de revisão espaçada** em 1, 3, 7 e 14 dias.
 - **Perfil**: estatísticas, plano Premium demonstrativo, painel administrativo com métricas e limpeza de histórico/cache.
@@ -36,6 +55,10 @@ Aplicativo Android nativo de **microaprendizagem em áudio**: resumos de livros,
 | Detalhe | Player | Mapa mental |
 |---|---|---|
 | ![Detalhe](docs/screenshots/detail.png) | ![Player](docs/screenshots/player.png) | ![Mapa](docs/screenshots/mindmap.png) |
+
+| Livros | Detalhe do livro | Leitor por capítulo |
+|---|---|---|
+| ![Livros](docs/screenshots/books.png) | ![Livro](docs/screenshots/book_detail.png) | ![Leitor](docs/screenshots/book_reader.png) |
 
 ## Como usar
 
@@ -60,17 +83,20 @@ Aplicativo Android nativo de **microaprendizagem em áudio**: resumos de livros,
 - Persistência local em `SharedPreferences` (JSON) — sem conta obrigatória e sem servidor.
 - `SpeechService` em primeiro plano com `TextToSpeech`, notificação e `SpeechController` (StateFlow).
 - `GeminiClient` (OkHttp + JSON) e `LocalSummarizer` como fallback offline.
-- `ImportFlow` (PDFBox + parser EPUB) para arquivos locais.
-- Testes Robolectric: biblioteca, resumidor local, leitura de EPUB/PDF, player/conteúdo, favoritos/quiz e screenshots.
+- `BookStore` (metadados em JSON e texto por capítulo em arquivos) e `BookImporter` (EPUB/PDF/OCR/DOCX/TXT/texto).
+- `BookProcessor` (map-reduce, capítulos, Q&A) e `BookProcessingService` (primeiro plano, progresso e retomada).
+- `ImportFlow` mantido para resumos avulsos.
+- Testes Robolectric: importação EPUB/PDF/DOCX/TXT, processamento local do livro e capítulo, Q&A, busca, persistência e screenshots.
 
 ```
 app/src/main/java/com/audioresumo/app/
-├── data/        modelos, Store (JSON), biblioteca
-├── service/     SpeechService, SpeechController, parágrafos
-├── ui/          Main, Splash, Detail, Player, MindMap, Flashcards, Quiz, ReviewPlan
-├── ui/fragments Home, Library, Create, Learn, Profile
+├── data/        modelos, Store, BookStore, Book, biblioteca
+├── service/     SpeechService, BookProcessingService, SpeechController
+├── ui/          Main, BookDetail, BookReader, BookQa, BookImport, Player, MindMap,
+│                Flashcards, Quiz, ReviewPlan, SummaryDetail
+├── ui/fragments Home, Library (Resumos/Livros), Create, Learn, Profile
 ├── ui/widgets/  CoverView, MindMapView
-└── util/        GeminiClient, LocalSummarizer, ImportFlow, Ui, ThemeUtils
+└── util/        GeminiClient, LocalSummarizer, ImportFlow, BookImporter, BookProcessor
 ```
 
 ## Build
@@ -104,12 +130,14 @@ O CI (`.github/workflows/build.yml`) usa os mesmos secrets `AURORA_*` dos outros
 
 - A voz e o offline do TTS dependem do motor de síntese instalado no aparelho.
 - EPUBs com DRM não são suportados.
-- PDFs digitalizados sem camada de texto exigem Gemini.
+- A qualidade do OCR depende da digitalização e do modelo ML Kit; a primeira leitura pode baixar o módulo pelo Google Play Services. Páginas muito ruins podem não ser reconhecidas.
+- Em PDFs sem sumário, a detecção de capítulos é heurística; sem títulos, o app cria blocos de páginas rotulados (não inventa capítulos).
+- O resumo local é extrativo e identificado como local; não é apresentado como resumo integral de IA.
 - O plano Premium é demonstrativo (sem cobrança real) nesta versão.
 - A sincronização em nuvem/Firebase do app web não foi portada; os dados são locais.
 
 ## Versão
 
-**1.0.0** — primeira versão Android nativa, com biblioteca, IA opcional, importação local de EPUB/PDF, player TTS e módulo de aprendizagem.
+**2.0.0** — plataforma completa de livros: importação de EPUB/PDF (texto + OCR)/DOCX/TXT/texto, biblioteca de livros, resumos do livro e por capítulo, leitor TTS, Q&A, busca, organização e durações 5/10/15/20 sem bloqueios.
 
-APK: [**audio-resumo-1.0.0.apk**](https://github.com/aldecirv/audio-resumo-android/releases/download/v1.0.0/audio-resumo-1.0.0.apk) · [Release v1.0.0](https://github.com/aldecirv/audio-resumo-android/releases/tag/v1.0.0)
+APK: [**audio-resumo-2.0.0.apk**](https://github.com/aldecirv/audio-resumo-android/releases/download/v2.0.0/audio-resumo-2.0.0.apk) · [Release v2.0.0](https://github.com/aldecirv/audio-resumo-android/releases/tag/v2.0.0)

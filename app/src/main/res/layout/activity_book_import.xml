@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Cancelar importação"
+            android:padding="11dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            style="@style/TextAppearance.Audio.H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Importar livro" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <ImageView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_menu_book"
+            app:tint="@color/brand" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/TextAppearance.Audio.H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="Lendo livro..." />
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextAppearance.Audio.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Extraindo capítulos e texto." />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:indicatorColor="@color/brand"
+            app:trackColor="@color/card_alt"
+            app:trackCornerRadius="3dp"
+            app:trackThickness="6dp" />
+
+        <TextView
+            android:id="@+id/percent"
+            style="@style/TextAppearance.Audio.Mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="0%" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.Audio.Button.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="18dp"
+            android:text="Cancelar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
