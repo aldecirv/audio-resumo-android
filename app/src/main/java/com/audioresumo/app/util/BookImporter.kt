@@ -184,7 +184,9 @@ object BookImporter {
                     onProgress(Progress(percent, "Página $page de $total${if (text.length < 40) " (OCR)" else ""}..."))
                 }
             }
-            if (pages.all { it.length < 40 }) error("PDF sem texto legível, mesmo com OCR.")
+            if (pages.all { it.length < 40 }) {
+                error("PDF sem texto legível. Se for digitalizado, conecte-se e tente novamente para baixar o módulo de OCR do Google Play Services.")
+            }
             val chapters = chaptersFromPages(pages)
             if (chapters.isEmpty()) error("Não encontrei conteúdo neste PDF.")
             return createBook(
@@ -201,37 +203,44 @@ object BookImporter {
     }
 
     private fun ocrPage(pdf: File, pageIndex: Int): String {
-        return runCatching {
-            ParcelFileDescriptor.open(pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { descriptor ->
-                PdfRenderer(descriptor).use { renderer ->
-                    if (pageIndex !in 0 until renderer.pageCount) return ""
-                    renderer.openPage(pageIndex).use { page ->
-                        val targetWidth = 1600
-                        val scale = targetWidth.toFloat() / page.width
-                        val bitmap = Bitmap.createBitmap(
-                            targetWidth,
-                            (page.height * scale).toInt().coerceAtLeast(1),
-                            Bitmap.Config.ARGB_8888
-                        )
-                        try {
-                            Canvas(bitmap).drawColor(Color.WHITE)
-                            page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
-                            val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+        // O módulo OCR do Play Services pode ser baixado na primeira execução.
+        // Tenta novamente uma vez para dar tempo ao download automático.
+        repeat(2) { attempt ->
+            val text = runCatching {
+                ParcelFileDescriptor.open(pdf, ParcelFileDescriptor.MODE_READ_ONLY).use { descriptor ->
+                    PdfRenderer(descriptor).use { renderer ->
+                        if (pageIndex !in 0 until renderer.pageCount) return ""
+                        renderer.openPage(pageIndex).use { page ->
+                            val targetWidth = 1600
+                            val scale = targetWidth.toFloat() / page.width
+                            val bitmap = Bitmap.createBitmap(
+                                targetWidth,
+                                (page.height * scale).toInt().coerceAtLeast(1),
+                                Bitmap.Config.ARGB_8888
+                            )
                             try {
-                                val result = kotlinx.coroutines.runBlocking {
-                                    recognizer.process(InputImage.fromBitmap(bitmap, 0)).await()
+                                Canvas(bitmap).drawColor(Color.WHITE)
+                                page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                                val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+                                try {
+                                    val result = kotlinx.coroutines.runBlocking {
+                                        recognizer.process(InputImage.fromBitmap(bitmap, 0)).await()
+                                    }
+                                    result.text
+                                } finally {
+                                    recognizer.close()
                                 }
-                                result.text
                             } finally {
-                                recognizer.close()
+                                bitmap.recycle()
                             }
-                        } finally {
-                            bitmap.recycle()
                         }
                     }
                 }
-            }
-        }.getOrDefault("")
+            }.getOrDefault("")
+            if (text.isNotBlank()) return text
+            if (attempt == 0) Thread.sleep(2_500)
+        }
+        return ""
     }
 
     private fun chaptersFromPages(pages: List<String>): List<BookChapter> {

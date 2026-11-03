@@ -20,6 +20,7 @@ class BookImportActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBookImportBinding
     private var job: Job? = null
+    private var currentUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +34,12 @@ class BookImportActivity : AppCompatActivity() {
         }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         val uri = intent.data ?: run { finish(); return }
+        currentUri = uri
         binding.back.setOnClickListener { cancel() }
-        binding.btnCancel.setOnClickListener { cancel() }
+        binding.btnCancel.setOnClickListener {
+            if (job?.isActive == true) cancel()
+            else currentUri?.let { start(it) }
+        }
         binding.progress.isIndeterminate = false
         start(uri)
     }
@@ -43,8 +48,10 @@ class BookImportActivity : AppCompatActivity() {
         job?.cancel()
         binding.status.text = "Lendo livro..."
         binding.message.text = "Preparando importação."
+        binding.progress.isVisible = true
         binding.progress.setProgressCompat(0, false)
         binding.percent.text = "0%"
+        binding.btnCancel.text = "Cancelar"
         job = lifecycleScope.launch {
             val result = BookImporter.importUri(this@BookImportActivity, uri) { progress ->
                 runOnUiThread {
@@ -62,7 +69,7 @@ class BookImportActivity : AppCompatActivity() {
             }.onFailure { error ->
                 binding.status.text = "Não foi possível importar"
                 binding.message.text = error.message ?: "Arquivo inválido ou sem texto."
-                binding.btnCancel.text = "Fechar"
+                binding.btnCancel.text = "Tentar novamente"
                 binding.progress.isVisible = false
             }
         }

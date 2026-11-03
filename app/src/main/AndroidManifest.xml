@@ -25,7 +25,7 @@
 
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
-            android:value="text_recognition" />
+            android:value="ocr" />
 
         <activity
             android:name=".ui.SplashActivity"
